@@ -32,15 +32,15 @@ export default function Home() {
     <>
       <Header />
       <div className="flex-1">
-        <section id="hero" className="container grid grid-cols-1 md:grid-cols-5 gap-12 items-center justify-center py-24 md:py-32">
+        <section id="hero" className="container grid grid-cols-1 md:grid-cols-5 gap-12 items-center justify-center py-24 md:py-40">
           <div className="md:col-span-3 space-y-6 text-center md:text-left">
-            <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+            <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
               {personalDetails.name}
             </h1>
-            <h2 className="text-2xl font-headline text-accent">{personalDetails.title}</h2>
+            <h2 className="text-2xl font-headline text-muted-foreground">{personalDetails.title}</h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">{personalDetails.bio}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <a href={personalDetails.resumeUrl} download>
                   <Download className="mr-2 h-5 w-5" /> Download Resume
                 </a>
@@ -52,17 +52,17 @@ export default function Home() {
           </div>
           <div className="md:col-span-2 flex justify-center">
             <Image
-              src="/profile.jpg"
-              alt="Alex Doe"
+              src="https://placehold.co/400x400.png"
+              alt="Harsh Ray"
               width={400}
               height={400}
-              className="rounded-full border-4 border-primary/50 shadow-2xl shadow-primary/20"
+              className="rounded-full border-4 border-primary/20 shadow-2xl shadow-primary/20"
               data-ai-hint="portrait professional"
             />
           </div>
         </section>
 
-        <section id="about" className="py-16 md:py-24 bg-card/50">
+        <section id="about" className="py-16 md:py-24 bg-card/90">
           <div className="container">
             <h2 className="text-3xl font-headline font-bold text-center mb-12">About Me</h2>
             <p className="max-w-3xl mx-auto text-center text-lg text-muted-foreground">
@@ -72,7 +72,7 @@ export default function Home() {
               <h3 className="text-2xl font-headline font-bold text-center mb-8">My Skills</h3>
               <div className="flex flex-wrap justify-center gap-4">
                 {skills.map((skill) => (
-                  <Badge key={skill.name} variant="outline" className="text-base bg-background border-primary/30 py-2 px-4 flex items-center gap-2 hover:bg-primary/10 transition-colors">
+                  <Badge key={skill.name} variant="secondary" className="text-base py-2 px-4 flex items-center gap-2">
                     {skill.icon} {skill.name}
                   </Badge>
                 ))}
@@ -88,22 +88,22 @@ export default function Home() {
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out.
             </p>
             <div className="flex justify-center items-center gap-4 sm:gap-8 flex-wrap">
-              <Button variant="link" asChild className="text-lg text-accent-foreground hover:text-primary transition-colors">
+              <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
                 <a href={`mailto:${personalDetails.email}`}>
                   <Mail className="mr-2" /> {personalDetails.email}
                 </a>
               </Button>
-              <Button variant="link" asChild className="text-lg text-accent-foreground hover:text-primary transition-colors">
+              <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
                 <a href={personalDetails.linkedin} target="_blank" rel="noreferrer">
                   <Linkedin className="mr-2" /> LinkedIn
                 </a>
               </Button>
-              <Button variant="link" asChild className="text-lg text-accent-foreground hover:text-primary transition-colors">
+              <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
                 <a href={personalDetails.github} target="_blank" rel="noreferrer">
                   <Github className="mr-2" /> GitHub
                 </a>
               </Button>
-              <Button variant="link" asChild className="text-lg text-accent-foreground hover:text-primary transition-colors">
+              <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
                 <a href={personalDetails.instagram} target="_blank" rel="noreferrer">
                   <Instagram className="mr-2" /> Instagram
                 </a>

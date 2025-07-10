@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Github, Globe } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -28,15 +29,24 @@ export function ProjectCard({ project }: { project: Project }) {
   useEffect(() => {
     // Fallback to a truncated version of the original description
     const words = project.description.split(' ');
-    const truncatedDescription = words.slice(0, 30).join(' ') + (words.length > 30 ? '...' : '');
+    const truncatedDescription = words.slice(0, 20).join(' ') + (words.length > 20 ? '...' : '');
     setSummary(truncatedDescription);
     setIsLoading(false);
   }, [project.description]);
 
   return (
-    <Card className="flex flex-col h-full bg-card/50 border-border/60 hover:border-primary/80 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+    <Card className="flex flex-col h-full bg-card border-border/60 hover:border-primary/80 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
+        <div className="relative h-48 w-full">
+            <Image 
+                src="https://placehold.co/600x400.png" 
+                alt={`${project.title} screenshot`}
+                layout="fill"
+                objectFit="cover"
+                data-ai-hint="abstract technology"
+            />
+        </div>
       <CardHeader>
-        <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
+        <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
         {isLoading ? (
@@ -50,14 +60,14 @@ export function ProjectCard({ project }: { project: Project }) {
         )}
       </CardContent>
       <CardFooter className="flex gap-2">
-        <Button asChild variant="outline" className="w-full hover:bg-primary/90 hover:text-primary-foreground">
+        <Button asChild variant="secondary" className="w-full">
           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
             <Github className="mr-2 h-4 w-4" />
             GitHub
           </a>
         </Button>
         {project.webUrl && (
-          <Button asChild variant="outline" className="w-full hover:bg-primary/90 hover:text-primary-foreground">
+          <Button asChild variant="outline" className="w-full">
             <a href={project.webUrl} target="_blank" rel="noopener noreferrer">
               <Globe className="mr-2 h-4 w-4" />
               Website

@@ -33,4 +33,9 @@ export const personalDetails = {
       description: "An online portal for NCC cadet management, allowing tracking of activities, schedules, and cadet performance. Built with modern frontend technologies (Next.js + Tailwind CSS) and structured for easy hosting and updates. Designed to digitize traditional paper-based NCC operations.",
       githubUrl: "https://github.com/harshray23/ncc-portal",
     },
+    {
+      title: "HospConnect",
+      description: "Developed for the TubeDude Buildathon, HospConnect is a smart healthcare portal leveraging Next.js and Firebase to streamline patient-doctor communication. It features real-time updates, patient management, and hospital directory services. Deployed with cloud hosting for scalability.",
+      githubUrl: "https://github.com/harshray23/hospconnect",
+    },
   ];

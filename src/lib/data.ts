@@ -38,4 +38,9 @@ export const personalDetails = {
       description: "Developed for the TubeDude Buildathon, HospConnect is a smart healthcare portal leveraging Next.js and Firebase to streamline patient-doctor communication. It features real-time updates, patient management, and hospital directory services. Deployed with cloud hosting for scalability.",
       githubUrl: "https://github.com/harshray23/hospconnect",
     },
+    {
+      title: "Arduino Mobile Communication System",
+      description: "An Arduino-based GSM communication system. Includes .ino files and documentation for sending and receiving SMS via GSM module. Ideal for use in emergency systems or IoT-based alerting mechanisms. Combines low-level hardware logic with real-world application.",
+      githubUrl: "https://github.com/harshray23/Arduino-Mobile.git",
+    },
   ];

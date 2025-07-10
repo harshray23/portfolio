@@ -37,27 +37,28 @@ const MatrixRain = () => {
     const draw = () => {
       if (!context) return;
 
-      if (frameCount % 4 === 0) { // Slow down the animation
-        context.fillStyle = 'rgba(0, 0, 0, 0.05)';
-        context.fillRect(0, 0, canvas.width, canvas.height);
+      // Use a transparent fill to let the background show through
+      context.fillStyle = 'rgba(0, 0, 0, 0)';
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.fillStyle = 'rgba(34, 34, 34, 0.05)'; // Match the dark background with low opacity for the trail effect
+      context.fillRect(0, 0, canvas.width, canvas.height);
 
-        context.fillStyle = '#0F0'; // green text
-        context.font = fontSize + 'px monospace';
+      context.fillStyle = 'hsl(var(--primary))'; // Use theme's primary color
+      context.font = fontSize + 'px monospace';
 
-        for (let i = 0; i < rainDrops.length; i++) {
-          const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-          context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+      for (let i = 0; i < rainDrops.length; i++) {
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
 
-          if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            rainDrops[i] = 0;
-          }
-          rainDrops[i]++;
+        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          rainDrops[i] = 0;
         }
+        rainDrops[i]++;
       }
       frameCount++;
     };
 
-    const interval = setInterval(draw, 30);
+    const interval = setInterval(draw, 50);
     
     const handleResize = () => {
       setCanvasDimensions();

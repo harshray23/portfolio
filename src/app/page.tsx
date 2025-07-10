@@ -52,12 +52,11 @@ export default function Home() {
           </div>
           <div className="md:col-span-2 flex justify-center">
             <Image
-              src="https://placehold.co/400x400.png"
+              src="/profile.jpg"
               alt="Harsh Ray"
               width={400}
               height={400}
               className="rounded-full border-4 border-primary/20 shadow-2xl shadow-primary/20"
-              data-ai-hint="portrait professional"
             />
           </div>
         </section>

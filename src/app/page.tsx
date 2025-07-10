@@ -17,8 +17,6 @@ import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { personalDetails, aboutMe } from '@/lib/data';
-import LottieBackground from '@/components/lottie-background';
-
 
 const skills = [
   { name: 'Python', icon: <Code className="h-5 w-5" /> },
@@ -34,9 +32,8 @@ export default function Home() {
     <>
       <Header />
       <div className="flex-1">
-        <section id="hero" className="relative container grid grid-cols-1 md:grid-cols-5 gap-12 items-center justify-center py-24 md:py-40 overflow-hidden">
-          <LottieBackground />
-          <div className="relative z-10 md:col-span-3 space-y-6 text-center md:text-left animate-fade-in">
+        <section id="hero" className="container grid grid-cols-1 md:grid-cols-5 gap-12 items-center justify-center py-24 md:py-40">
+          <div className="md:col-span-3 space-y-6 text-center md:text-left animate-fade-in">
             <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 animate-fade-up">
               {personalDetails.name}
             </h1>
@@ -53,7 +50,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="relative z-10 md:col-span-2 flex justify-center animate-scale-in">
+          <div className="md:col-span-2 flex justify-center animate-scale-in">
             <div className="relative w-[400px] h-[400px]">
               <div className="absolute inset-0 rounded-full border-4 border-primary/20 shadow-2xl shadow-primary/20">
               </div>

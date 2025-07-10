@@ -41,12 +41,12 @@ const aboutMe = {
 };
 
 const skills = [
-  { name: 'React / Next.js', icon: <Code className="h-5 w-5" /> },
-  { name: 'Node.js', icon: <Code className="h-5 w-5" /> },
   { name: 'Python', icon: <Code className="h-5 w-5" /> },
-  { name: 'AI / ML', icon: <BrainCircuit className="h-5 w-5" /> },
-  { name: 'Databases', icon: <Database className="h-5 w-5" /> },
-  { name: 'Cloud & DevOps', icon: <Cloud className="h-5 w-5" /> },
+  { name: 'Java', icon: <Code className="h-5 w-5" /> },
+  { name: 'C', icon: <Code className="h-5 w-5" /> },
+  { name: 'Firebase', icon: <Cloud className="h-5 w-5" /> },
+  { name: 'MySQL', icon: <Database className="h-5 w-5" /> },
+  { name: 'Data Structures', icon: <BrainCircuit className="h-5 w-5" /> },
 ];
 
 const projects = [

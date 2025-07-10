@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { Github, Globe } from "lucide-react";
 
-import { summarizeProjectDescription } from "@/ai/flows/summarize-project-description";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -27,25 +26,11 @@ export function ProjectCard({ project }: { project: Project }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const getSummary = async () => {
-      setIsLoading(true);
-      try {
-        const result = await summarizeProjectDescription({
-          description: project.description,
-          maxLength: 30,
-        });
-        setSummary(result.summary);
-      } catch (error) {
-        console.error("Failed to summarize project description:", error);
-        // Fallback to a truncated version of the original description
-        const words = project.description.split(' ');
-        setSummary(words.slice(0, 30).join(' ') + (words.length > 30 ? '...' : ''));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    getSummary();
+    // Fallback to a truncated version of the original description
+    const words = project.description.split(' ');
+    const truncatedDescription = words.slice(0, 30).join(' ') + (words.length > 30 ? '...' : '');
+    setSummary(truncatedDescription);
+    setIsLoading(false);
   }, [project.description]);
 
   return (

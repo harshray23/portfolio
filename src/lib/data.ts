@@ -28,4 +28,9 @@ export const personalDetails = {
       description: "A full-stack web portal built using Next.js, Tailwind CSS, and Firebase, designed for managing institutional data for AEC. It includes role-based login, dashboards for students, teachers, and admins, and cloud-hosted configurations. Ideal for institutional workflow management with responsive design.",
       githubUrl: "https://github.com/harshray23/aec-fsp",
     },
+    {
+      title: "NCC Portal",
+      description: "An online portal for NCC cadet management, allowing tracking of activities, schedules, and cadet performance. Built with modern frontend technologies (Next.js + Tailwind CSS) and structured for easy hosting and updates. Designed to digitize traditional paper-based NCC operations.",
+      githubUrl: "https://github.com/harshray23/ncc-portal",
+    },
   ];

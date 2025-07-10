@@ -20,6 +20,7 @@ type Project = {
   description: string;
   githubUrl: string;
   webUrl?: string;
+  imageUrl: string;
 };
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -38,11 +39,10 @@ export function ProjectCard({ project }: { project: Project }) {
     <Card className="flex flex-col h-full bg-card border-border/60 hover:border-primary/80 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
         <div className="relative h-48 w-full">
             <Image 
-                src="https://placehold.co/600x400.png" 
+                src={project.imageUrl} 
                 alt={`${project.title} screenshot`}
                 layout="fill"
                 objectFit="cover"
-                data-ai-hint="abstract technology"
             />
         </div>
       <CardHeader>

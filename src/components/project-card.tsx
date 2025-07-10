@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Github } from "lucide-react";
+import { Github, Globe } from "lucide-react";
 
 import { summarizeProjectDescription } from "@/ai/flows/summarize-project-description";
 import { Button } from "@/components/ui/button";
@@ -19,6 +19,7 @@ type Project = {
   title: string;
   description: string;
   githubUrl: string;
+  webUrl?: string;
 };
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -63,13 +64,21 @@ export function ProjectCard({ project }: { project: Project }) {
           <CardDescription>{summary}</CardDescription>
         )}
       </CardContent>
-      <CardFooter>
+      <CardFooter className="flex gap-2">
         <Button asChild variant="outline" className="w-full hover:bg-primary/90 hover:text-primary-foreground">
           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
             <Github className="mr-2 h-4 w-4" />
-            View on GitHub
+            GitHub
           </a>
         </Button>
+        {project.webUrl && (
+          <Button asChild variant="outline" className="w-full hover:bg-primary/90 hover:text-primary-foreground">
+            <a href={project.webUrl} target="_blank" rel="noopener noreferrer">
+              <Globe className="mr-2 h-4 w-4" />
+              Website
+            </a>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );

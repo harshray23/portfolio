@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -14,6 +15,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { summarizeProjectDescription } from "@/ai/flows/summarize-project-description";
 
 type Project = {
   title: string;
@@ -29,11 +31,26 @@ export function ProjectCard({ project }: { project: Project }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Fallback to a truncated version of the original description
-    const words = project.description.split(' ');
-    const truncatedDescription = words.slice(0, 20).join(' ') + (words.length > 20 ? '...' : '');
-    setSummary(truncatedDescription);
-    setIsLoading(false);
+    const generateSummary = async () => {
+      try {
+        setIsLoading(true);
+        const result = await summarizeProjectDescription({
+          description: project.description,
+          maxLength: 25,
+        });
+        setSummary(result.summary);
+      } catch (error) {
+        console.error("Error generating summary:", error);
+        // Fallback to a truncated version if AI fails
+        const words = project.description.split(' ');
+        const truncatedDescription = words.slice(0, 20).join(' ') + (words.length > 20 ? '...' : '');
+        setSummary(truncatedDescription);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    generateSummary();
   }, [project.description]);
 
   return (

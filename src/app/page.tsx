@@ -15,13 +15,29 @@ import {
   Github,
   Instagram
 } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { personalDetails, aboutMe } from '@/lib/data';
 import { SplashScreen } from '@/components/splash-screen';
+import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
+import { Chatbot } from '@/components/chatbot';
 
 const skills = [
   { name: 'Python', icon: <Code className="h-5 w-5" /> },
@@ -32,8 +48,42 @@ const skills = [
   { name: 'Data Structures', icon: <BrainCircuit className="h-5 w-5" /> },
 ];
 
+const contactFormSchema = z.object({
+  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  email: z.string().email({ message: 'Please enter a valid email address.' }),
+  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+});
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const { toast } = useToast();
+
+  const form = useForm<z.infer<typeof contactFormSchema>>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+  });
+
+  async function onSubmit(values: z.infer<typeof contactFormSchema>) {
+    try {
+      await sendContactMessage(values);
+      toast({
+        title: 'Message Sent!',
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        variant: 'destructive',
+        title: 'Uh oh! Something went wrong.',
+        description: 'There was a problem sending your message. Please try again.',
+      });
+    }
+  }
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -109,12 +159,60 @@ export default function Home() {
         </section>
 
         <section id="contact" className="py-16 md:py-24">
-          <div className="container text-center animate-fade-in">
-            <h2 className="text-3xl font-headline font-bold mb-4 animate-fade-up">Get In Touch</h2>
-            <p className="max-w-2xl mx-auto text-muted-foreground mb-8 animate-fade-up animation-delay-200">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out.
+          <div className="container animate-fade-in">
+            <h2 className="text-3xl font-headline font-bold text-center mb-4 animate-fade-up">Get In Touch</h2>
+            <p className="max-w-2xl mx-auto text-muted-foreground mb-8 text-center animate-fade-up animation-delay-200">
+              Have a question, a project proposal, or just want to say hi? Use the form below or connect with me on social media.
             </p>
-            <div className="flex justify-center items-center gap-4 sm:gap-8 flex-wrap animate-fade-up animation-delay-300">
+            <div className="max-w-xl mx-auto">
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your Name" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input placeholder="your.email@example.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea placeholder="Let's build something amazing together!" className="min-h-[120px]" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button type="submit" size="lg" className="w-full" disabled={form.formState.isSubmitting}>
+                    {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                </form>
+              </Form>
+            </div>
+            <div className="flex justify-center items-center gap-4 sm:gap-8 flex-wrap animate-fade-up animation-delay-300 mt-12">
               <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
                 <a href={`mailto:${personalDetails.email}`}>
                   <Mail className="mr-2" /> {personalDetails.email}
@@ -139,6 +237,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <Chatbot />
       <Footer 
         name={personalDetails.name}
         email={personalDetails.email}

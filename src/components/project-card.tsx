@@ -38,15 +38,14 @@ export function ProjectCard({ project }: { project: Project }) {
 
   return (
     <Card className="flex flex-col h-full bg-card border-border/60 hover:border-primary/80 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
-        <div className="relative h-48 w-full">
-            <Image 
-                src={project.imageUrl} 
-                alt={`${project.title} screenshot`}
-                layout="fill"
-                objectFit="cover"
-                data-ai-hint={project.dataAiHint}
-            />
-        </div>
+        <Image 
+            src={project.imageUrl} 
+            alt={`${project.title} screenshot`}
+            width={600}
+            height={400}
+            className="w-full object-cover"
+            data-ai-hint={project.dataAiHint}
+        />
       <CardHeader>
         <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
       </CardHeader>

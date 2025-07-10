@@ -21,6 +21,7 @@ type Project = {
   githubUrl: string;
   webUrl?: string;
   imageUrl: string;
+  dataAiHint?: string;
 };
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -43,6 +44,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 alt={`${project.title} screenshot`}
                 layout="fill"
                 objectFit="cover"
+                data-ai-hint={project.dataAiHint}
             />
         </div>
       <CardHeader>

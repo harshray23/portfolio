@@ -17,6 +17,8 @@ import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { personalDetails, aboutMe } from '@/lib/data';
+import MatrixRain from '@/components/matrix-rain';
+
 
 const skills = [
   { name: 'Python', icon: <Code className="h-5 w-5" /> },
@@ -51,13 +53,18 @@ export default function Home() {
             </div>
           </div>
           <div className="md:col-span-2 flex justify-center animate-scale-in">
-            <Image
-              src="/profile.jpg"
-              alt="Harsh Ray"
-              width={400}
-              height={400}
-              className="rounded-full border-4 border-primary/20 shadow-2xl shadow-primary/20"
-            />
+            <div className="relative w-[400px] h-[400px]">
+              <div className="absolute inset-0 rounded-full border-4 border-primary/20 shadow-2xl shadow-primary/20 overflow-hidden">
+                <MatrixRain />
+              </div>
+              <Image
+                src="/profile.jpg"
+                alt="Harsh Ray"
+                width={400}
+                height={400}
+                className="relative rounded-full"
+              />
+            </div>
           </div>
         </section>
 

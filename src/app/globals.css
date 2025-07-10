@@ -83,3 +83,12 @@
     scroll-behavior: smooth;
   }
 }
+
+@keyframes matrix-rain-text {
+  0% { color: #0f0; }
+  100% { color: #0a0; }
+}
+
+.matrix-rain {
+  animation: matrix-rain-text 100ms infinite;
+}

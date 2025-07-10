@@ -1,13 +1,14 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 
 interface FooterProps {
   name: string;
   github: string;
   linkedin: string;
   email: string;
+  instagram?: string;
 }
 
-export function Footer({ name, github, linkedin, email }: FooterProps) {
+export function Footer({ name, github, linkedin, email, instagram }: FooterProps) {
   return (
     <footer className="border-t border-border/40">
       <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
@@ -26,6 +27,11 @@ export function Footer({ name, github, linkedin, email }: FooterProps) {
           <a href={`mailto:${email}`} className="text-muted-foreground transition-colors hover:text-primary" aria-label="Email">
             <Mail size={20} />
           </a>
+          {instagram && (
+            <a href={instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-primary" aria-label="Instagram">
+              <Instagram size={20} />
+            </a>
+          )}
         </div>
       </div>
     </footer>

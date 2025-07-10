@@ -8,7 +8,8 @@ import {
   Cloud,
   Mail,
   Linkedin,
-  Github
+  Github,
+  Instagram
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -119,6 +120,11 @@ export default function Home() {
                   <Github className="mr-2" /> GitHub
                 </a>
               </Button>
+              <Button variant="link" asChild className="text-lg text-accent-foreground hover:text-primary transition-colors">
+                <a href={personalDetails.instagram} target="_blank" rel="noreferrer">
+                  <Instagram className="mr-2" /> Instagram
+                </a>
+              </Button>
             </div>
           </div>
         </section>
@@ -128,6 +134,7 @@ export default function Home() {
         email={personalDetails.email}
         github={personalDetails.github}
         linkedin={personalDetails.linkedin}
+        instagram={personalDetails.instagram}
       />
     </>
   );

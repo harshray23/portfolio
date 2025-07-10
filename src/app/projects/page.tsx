@@ -24,6 +24,7 @@ export default function ProjectsPage() {
         email={personalDetails.email}
         github={personalDetails.github}
         linkedin={personalDetails.linkedin}
+        instagram={personalDetails.instagram}
       />
     </>
   );

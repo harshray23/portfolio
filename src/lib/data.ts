@@ -2,9 +2,10 @@ export const personalDetails = {
     name: "Harsh Ray",
     title: "Full-Stack Developer & AI Enthusiast",
     bio: "Crafting elegant solutions to complex problems. Passionate about building intelligent applications and user-centric interfaces.",
-    email: "alex.doe@email.com",
-    linkedin: "https://linkedin.com/in/alex-doe",
-    github: "https://github.com/alex-doe",
+    email: "harshay2007@gmail.com",
+    linkedin: "https://www.linkedin.com/in/harsh-ray-499856329/",
+    github: "https://github.com/harshray23",
+    instagram: "https://www.instagram.com/_harsh_ray_23/",
     resumeUrl: "/resume.pdf",
   };
   
@@ -41,4 +42,3 @@ export const personalDetails = {
       webUrl: "https://example.com/ecomm-recommender"
     },
   ];
-  

@@ -14,10 +14,9 @@ import {
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ProjectCard } from '@/components/project-card';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { personalDetails, aboutMe, projects } from '@/lib/data';
+import { personalDetails, aboutMe } from '@/lib/data';
 
 const skills = [
   { name: 'Python', icon: <Code className="h-5 w-5" /> },
@@ -78,22 +77,6 @@ export default function Home() {
                   </Badge>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="projects" className="py-16 md:py-24">
-          <div className="container">
-            <h2 className="text-3xl font-headline font-bold text-center mb-12">Projects Showcase</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.slice(0, 3).map((project, index) => (
-                <ProjectCard key={index} project={project} />
-              ))}
-            </div>
-            <div className="mt-12 text-center">
-              <Button asChild size="lg">
-                <Link href="/projects">View All Projects</Link>
-              </Button>
             </div>
           </div>
         </section>

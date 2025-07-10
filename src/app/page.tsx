@@ -33,13 +33,13 @@ export default function Home() {
       <Header />
       <div className="flex-1">
         <section id="hero" className="container grid grid-cols-1 md:grid-cols-5 gap-12 items-center justify-center py-24 md:py-40">
-          <div className="md:col-span-3 space-y-6 text-center md:text-left">
-            <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+          <div className="md:col-span-3 space-y-6 text-center md:text-left animate-fade-in">
+            <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 animate-fade-up">
               {personalDetails.name}
             </h1>
-            <h2 className="text-2xl font-headline text-muted-foreground">{personalDetails.title}</h2>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl">{personalDetails.bio}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <h2 className="text-2xl font-headline text-muted-foreground animate-fade-up animation-delay-200">{personalDetails.title}</h2>
+            <p className="max-w-[600px] text-muted-foreground md:text-xl animate-fade-up animation-delay-300">{personalDetails.bio}</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-up animation-delay-400">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <a href={personalDetails.resumeUrl} download>
                   <Download className="mr-2 h-5 w-5" /> Download Resume
@@ -50,7 +50,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="md:col-span-2 flex justify-center">
+          <div className="md:col-span-2 flex justify-center animate-scale-in">
             <Image
               src="/profile.jpg"
               alt="Harsh Ray"
@@ -62,16 +62,21 @@ export default function Home() {
         </section>
 
         <section id="about" className="py-16 md:py-24 bg-card/90">
-          <div className="container">
-            <h2 className="text-3xl font-headline font-bold text-center mb-12">About Me</h2>
-            <p className="max-w-3xl mx-auto text-center text-lg text-muted-foreground">
+          <div className="container animate-fade-in">
+            <h2 className="text-3xl font-headline font-bold text-center mb-12 animate-fade-up">About Me</h2>
+            <p className="max-w-3xl mx-auto text-center text-lg text-muted-foreground animate-fade-up animation-delay-200">
               {aboutMe.introduction}
             </p>
             <div className="mt-12">
-              <h3 className="text-2xl font-headline font-bold text-center mb-8">My Skills</h3>
+              <h3 className="text-2xl font-headline font-bold text-center mb-8 animate-fade-up animation-delay-300">My Skills</h3>
               <div className="flex flex-wrap justify-center gap-4">
-                {skills.map((skill) => (
-                  <Badge key={skill.name} variant="secondary" className="text-base py-2 px-4 flex items-center gap-2">
+                {skills.map((skill, index) => (
+                  <Badge 
+                    key={skill.name} 
+                    variant="secondary" 
+                    className="text-base py-2 px-4 flex items-center gap-2 animate-fade-up"
+                    style={{ animationDelay: `${(index + 4) * 100}ms` }}
+                  >
                     {skill.icon} {skill.name}
                   </Badge>
                 ))}
@@ -81,12 +86,12 @@ export default function Home() {
         </section>
 
         <section id="contact" className="py-16 md:py-24">
-          <div className="container text-center">
-            <h2 className="text-3xl font-headline font-bold mb-4">Get In Touch</h2>
-            <p className="max-w-2xl mx-auto text-muted-foreground mb-8">
+          <div className="container text-center animate-fade-in">
+            <h2 className="text-3xl font-headline font-bold mb-4 animate-fade-up">Get In Touch</h2>
+            <p className="max-w-2xl mx-auto text-muted-foreground mb-8 animate-fade-up animation-delay-200">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out.
             </p>
-            <div className="flex justify-center items-center gap-4 sm:gap-8 flex-wrap">
+            <div className="flex justify-center items-center gap-4 sm:gap-8 flex-wrap animate-fade-up animation-delay-300">
               <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
                 <a href={`mailto:${personalDetails.email}`}>
                   <Mail className="mr-2" /> {personalDetails.email}

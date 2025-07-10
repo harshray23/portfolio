@@ -43,4 +43,9 @@ export const personalDetails = {
       description: "An Arduino-based GSM communication system. Includes .ino files and documentation for sending and receiving SMS via GSM module. Ideal for use in emergency systems or IoT-based alerting mechanisms. Combines low-level hardware logic with real-world application.",
       githubUrl: "https://github.com/harshray23/Arduino-Mobile.git",
     },
+    {
+      title: "Bluetooth Controlled Car",
+      description: "A 6-wheeled car controlled via Bluetooth using an Arduino Uno and motor driver, with an Android interface. Includes .ino code and documentation. A practical robotics project demonstrating wireless control and real-time maneuvering.",
+      githubUrl: "https://github.com/harshray23/Bluetooth-Car.git",
+    },
   ];

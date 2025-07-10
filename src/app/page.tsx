@@ -34,7 +34,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { personalDetails, aboutMe } from '@/lib/data';
+import { personalDetails, aboutMe, projects } from '@/lib/data';
 import { SplashScreen } from '@/components/splash-screen';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
 import { Chatbot } from '@/components/chatbot';
@@ -88,7 +88,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 10000); 
+    }, 4000); 
 
     return () => clearTimeout(timer);
   }, []);

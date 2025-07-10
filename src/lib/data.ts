@@ -33,12 +33,13 @@ export const personalDetails = {
       title: "NCC Portal",
       description: "An online portal for NCC cadet management, allowing tracking of activities, schedules, and cadet performance. Built with modern frontend technologies (Next.js + Tailwind CSS) and structured for easy hosting and updates. Designed to digitize traditional paper-based NCC operations.",
       githubUrl: "https://github.com/harshray23/ncc-portal",
-      imageUrl: "/ncc-portal.png",
+      imageUrl: "/nccportal.png",
     },
     {
       title: "HospConnect",
       description: "Developed for the TubeDude Buildathon, HospConnect is a smart healthcare portal leveraging Next.js and Firebase to streamline patient-doctor communication. It features real-time updates, patient management, and hospital directory services. Deployed with cloud hosting for scalability.",
       githubUrl: "https://github.com/harshray23/hospconnect",
+      webUrl: "https://hospconnect.vercel.app/",
       imageUrl: "/hospconnect.png",
     },
     {
@@ -63,6 +64,6 @@ export const personalDetails = {
       title: "Phone Info Portal",
       description: "A modern web-based tool for retrieving and displaying detailed phone information such as specifications, brand, and model. Built with Next.js and Tailwind CSS, it uses an API-driven approach to fetch device data. Ideal for tech comparison platforms or electronics resellers.",
       githubUrl: "https://github.com/harshray23/phone-info",
-      imageUrl: "/phone-info.png",
+      imageUrl: "/phoneinfo.png",
     },
   ];

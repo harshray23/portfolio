@@ -48,4 +48,9 @@ export const personalDetails = {
       description: "A 6-wheeled car controlled via Bluetooth using an Arduino Uno and motor driver, with an Android interface. Includes .ino code and documentation. A practical robotics project demonstrating wireless control and real-time maneuvering.",
       githubUrl: "https://github.com/harshray23/Bluetooth-Car.git",
     },
+    {
+      title: "Ultrasonic Radar System",
+      description: "A radar system using an ultrasonic sensor mounted on a servo motor, visualized via a GUI or serial monitor. Includes PDF documentation and Arduino code. Excellent for basic object detection and distance mapping, applicable in robotics and obstacle detection.",
+      githubUrl: "https://github.com/harshray23/Radar.git",
+    },
   ];

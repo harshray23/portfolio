@@ -27,7 +27,7 @@ import { Footer } from '@/components/footer';
 
 // Static data for the portfolio
 const personalDetails = {
-  name: "Alex Doe",
+  name: "Harsh Ray",
   title: "Full-Stack Developer & AI Enthusiast",
   bio: "Crafting elegant solutions to complex problems. Passionate about building intelligent applications and user-centric interfaces.",
   email: "alex.doe@email.com",
@@ -66,28 +66,6 @@ const projects = [
     githubUrl: "https://github.com/alex-doe/ecomm-recommender",
   },
 ];
-
-const testimonials = [
-  {
-    name: "Jane Smith",
-    title: "Product Manager at TechCorp",
-    quote: "Alex is one of the most dedicated and skilled developers I've had the pleasure of working with. Their ability to tackle complex problems with innovative solutions is truly remarkable. They were a key player in our project's success.",
-    avatar: "https://placehold.co/100x100"
-  },
-  {
-    name: "John Davis",
-    title: "Lead Engineer at Innovate LLC",
-    quote: "An exceptional team player with a deep understanding of modern web technologies. Alex's contributions were invaluable, and their passion for quality code is evident in all their work. Highly recommended!",
-    avatar: "https://placehold.co/100x100"
-  },
-  {
-    name: "Samantha Lee",
-    title: "CEO of StartUpX",
-    quote: "Working with Alex was a fantastic experience. They delivered a high-quality product on time and exceeded our expectations. Their communication skills and professional attitude made the collaboration seamless.",
-    avatar: "https://placehold.co/100x100"
-  },
-];
-
 
 export default function Home() {
   return (
@@ -151,40 +129,6 @@ export default function Home() {
                 <ProjectCard key={index} project={project} />
               ))}
             </div>
-          </div>
-        </section>
-
-        <section id="testimonials" className="py-16 md:py-24 bg-card/50">
-          <div className="container">
-            <h2 className="text-3xl font-headline font-bold text-center mb-12">What Others Say</h2>
-            <Carousel
-              opts={{ align: "start", loop: true }}
-              className="w-full max-w-5xl mx-auto"
-            >
-              <CarouselContent>
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1 h-full">
-                       <Card className="flex flex-col h-full bg-background/50 p-6 justify-center items-center text-center border-border/60">
-                        <Image
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          width={80}
-                          height={80}
-                          className="rounded-full mb-4 border-2 border-accent"
-                          data-ai-hint="person face"
-                        />
-                        <blockquote className="text-muted-foreground italic mb-4">"{testimonial.quote}"</blockquote>
-                        <p className="font-bold font-headline text-foreground">{testimonial.name}</p>
-                        <p className="text-sm text-primary">{testimonial.title}</p>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden sm:flex" />
-              <CarouselNext className="hidden sm:flex" />
-            </Carousel>
           </div>
         </section>
 

@@ -16,9 +16,6 @@ export function Header() {
             <Link href="#projects">Projects</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link href="#testimonials">Testimonials</Link>
-          </Button>
-          <Button variant="ghost" asChild>
             <Link href="#contact">Contact</Link>
           </Button>
         </nav>

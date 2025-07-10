@@ -33,7 +33,7 @@ export const personalDetails = {
       title: "NCC Portal",
       description: "An online portal for NCC cadet management, allowing tracking of activities, schedules, and cadet performance. Built with modern frontend technologies (Next.js + Tailwind CSS) and structured for easy hosting and updates. Designed to digitize traditional paper-based NCC operations.",
       githubUrl: "https://github.com/harshray23/ncc-portal",
-      imageUrl: "/ncc-portal.png",
+      imageUrl: "/nccportal.png",
     },
     {
       title: "HospConnect",

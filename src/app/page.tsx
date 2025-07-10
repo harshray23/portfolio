@@ -114,7 +114,7 @@ export default function Home() {
           </div>
           <div className="md:col-span-2 flex justify-center">
             <Image
-              src="https://placehold.co/400x400"
+              src="/profile.jpg"
               alt="Alex Doe"
               width={400}
               height={400}

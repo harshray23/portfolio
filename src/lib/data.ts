@@ -53,4 +53,9 @@ export const personalDetails = {
       description: "A radar system using an ultrasonic sensor mounted on a servo motor, visualized via a GUI or serial monitor. Includes PDF documentation and Arduino code. Excellent for basic object detection and distance mapping, applicable in robotics and obstacle detection.",
       githubUrl: "https://github.com/harshray23/Radar.git",
     },
+    {
+      title: "Phone Info Portal",
+      description: "A modern web-based tool for retrieving and displaying detailed phone information such as specifications, brand, and model. Built with Next.js and Tailwind CSS, it uses an API-driven approach to fetch device data. Ideal for tech comparison platforms or electronics resellers.",
+      githubUrl: "https://github.com/harshray23/phone-info",
+    },
   ];

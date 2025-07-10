@@ -26,6 +26,7 @@ export const personalDetails = {
     {
       title: "AEC-FSP Portal",
       description: "A full-stack web portal built using Next.js, Tailwind CSS, and Firebase, designed for managing institutional data for AEC. It includes role-based login, dashboards for students, teachers, and admins, and cloud-hosted configurations. Ideal for institutional workflow management with responsive design.",
+      summary: "A full-stack web portal for managing institutional data at AEC, featuring role-based logins and dashboards for students, teachers, and admins.",
       githubUrl: "https://github.com/harshray23/aec-fsp",
       imageUrl: "/aec-fsp-portal.png",
       dataAiHint: "portal dashboard"
@@ -33,6 +34,7 @@ export const personalDetails = {
     {
       title: "NCC Portal",
       description: "An online portal for NCC cadet management, allowing tracking of activities, schedules, and cadet performance. Built with modern frontend technologies (Next.js + Tailwind CSS) and structured for easy hosting and updates. Designed to digitize traditional paper-based NCC operations.",
+      summary: "An online portal for NCC cadet management that tracks activities, schedules, and performance, digitizing traditional paper-based operations.",
       githubUrl: "https://github.com/harshray23/ncc-portal",
       imageUrl: "/nccportal.png",
       dataAiHint: "military management"
@@ -40,6 +42,7 @@ export const personalDetails = {
     {
       title: "HospConnect",
       description: "Developed for the TubeDude Buildathon, HospConnect is a smart healthcare portal leveraging Next.js and Firebase to streamline patient-doctor communication. It features real-time updates, patient management, and hospital directory services. Deployed with cloud hosting for scalability.",
+      summary: "HospConnect is a smart healthcare portal that streamlines patient-doctor communication with real-time updates, patient management, and hospital directory services.",
       githubUrl: "https://github.com/harshray23/hospconnect",
       webUrl: "https://hospconnect.vercel.app/",
       imageUrl: "/hospconnect.png",
@@ -48,6 +51,7 @@ export const personalDetails = {
     {
       title: "Arduino Mobile Communication System",
       description: "An Arduino-based GSM communication system. Includes .ino files and documentation for sending and receiving SMS via GSM module. Ideal for use in emergency systems or IoT-based alerting mechanisms. Combines low-level hardware logic with real-world application.",
+      summary: "An Arduino-based GSM system for sending and receiving SMS, ideal for emergency alerts and IoT applications.",
       githubUrl: "https://github.com/harshray23/Arduino-Mobile.git",
       imageUrl: "/arduino-mobile.jpg",
       dataAiHint: "arduino iot"
@@ -55,6 +59,7 @@ export const personalDetails = {
     {
       title: "Bluetooth Controlled Car",
       description: "A 6-wheeled car controlled via Bluetooth using an Arduino Uno and motor driver, with an Android interface. Includes .ino code and documentation. A practical robotics project demonstrating wireless control and real-time maneuvering.",
+      summary: "A 6-wheeled, Bluetooth-controlled car using an Arduino Uno and motor driver, operated via an Android interface for wireless control.",
       githubUrl: "https://github.com/harshray23/Bluetooth-Car.git",
       imageUrl: "/car.jpg",
       dataAiHint: "robotics car"
@@ -62,6 +67,7 @@ export const personalDetails = {
     {
       title: "Ultrasonic Radar System",
       description: "A radar system using an ultrasonic sensor mounted on a servo motor, visualized via a GUI or serial monitor. Includes PDF documentation and Arduino code. Excellent for basic object detection and distance mapping, applicable in robotics and obstacle detection.",
+      summary: "A radar system using an ultrasonic sensor and servo motor for object detection and distance mapping, visualized via a GUI.",
       githubUrl: "https://github.com/harshray23/Radar.git",
       imageUrl: "/radar.jpg",
       dataAiHint: "radar system"
@@ -69,6 +75,7 @@ export const personalDetails = {
     {
       title: "Phone Info Portal",
       description: "A modern web-based tool for retrieving and displaying detailed phone information such as specifications, brand, and model. Built with Next.js and Tailwind CSS, it uses an API-driven approach to fetch device data. Ideal for tech comparison platforms or electronics resellers.",
+      summary: "A web tool for retrieving and displaying detailed phone specifications using an API-driven approach. Ideal for tech comparison or resellers.",
       githubUrl: "https://github.com/harshray23/phone-info",
       webUrl: "https://phone-info-nine.vercel.app/",
       imageUrl: "/phoneinfo.png",

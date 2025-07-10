@@ -1,12 +1,11 @@
 "use client";
 
 import Lottie from "lottie-react";
-import animationData from "/public/GradientDotsBackground.json";
 
 const LottieBackground = () => {
   return (
     <Lottie
-      animationData={animationData}
+      path="/GradientDotsBackground.json"
       className="absolute inset-0 w-full h-full"
       style={{
         width: '100%',

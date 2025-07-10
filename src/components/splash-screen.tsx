@@ -20,8 +20,8 @@ export function SplashScreen() {
         visible ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      <div className="text-center animate-fade-in">
-        <h1 className="text-4xl md:text-6xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+      <div className="text-center animate-fade-up">
+        <h1 className="text-4xl md:text-6xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 animate-pulse-subtle">
           Welcome, to my Portfolio
         </h1>
         <p className="mt-4 text-xl md:text-2xl text-muted-foreground">

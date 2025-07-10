@@ -34,7 +34,7 @@ export const personalDetails = {
       title: "NCC Portal",
       description: "An online portal for NCC cadet management, allowing tracking of activities, schedules, and cadet performance. Built with modern frontend technologies (Next.js + Tailwind CSS) and structured for easy hosting and updates. Designed to digitize traditional paper-based NCC operations.",
       githubUrl: "https://github.com/harshray23/ncc-portal",
-      imageUrl: "/ncc-portal.png",
+      imageUrl: "/nccportal.png",
       dataAiHint: "military management"
     },
     {
@@ -71,7 +71,7 @@ export const personalDetails = {
       description: "A modern web-based tool for retrieving and displaying detailed phone information such as specifications, brand, and model. Built with Next.js and Tailwind CSS, it uses an API-driven approach to fetch device data. Ideal for tech comparison platforms or electronics resellers.",
       githubUrl: "https://github.com/harshray23/phone-info",
       webUrl: "https://phone-info-nine.vercel.app/",
-      imageUrl: "/phone-info.png",
+      imageUrl: "/phoneinfo.png",
       dataAiHint: "phone specifications"
     },
   ];

@@ -37,7 +37,7 @@ const personalDetails = {
 };
 
 const aboutMe = {
-  introduction: "Hello! I'm Alex, a developer with a knack for turning ideas into reality. With a background in computer science and a passion for continuous learning, I've spent years honing my skills in web development, machine learning, and software architecture. My goal is to build products that are not only functional and efficient but also beautiful and enjoyable to use. When I'm not coding, you can find me exploring the latest in tech, contributing to open-source projects, or hiking in the great outdoors.",
+  introduction: "Hi, I'm Harsh Ray. I'm a second-year student specializing in Computer Science with a focus on Artificial Intelligence and Machine Learning. With a curious mind and a drive to keep learning, I’ve been honing my skills in Python, C, Java, Firebase, and MySQL — turning classroom concepts into hands-on projects. I’m passionate about building smart, efficient, and user-friendly tech solutions that not only work great but feel great to use. When I’m not coding, you’ll probably find me playing cricket or football, swimming, vibing to music, or exploring new places on tour. These experiences fuel my creativity and keep me inspired.",
 };
 
 const skills = [

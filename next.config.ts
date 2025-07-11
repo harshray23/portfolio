@@ -16,11 +16,14 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.clerk.com',
+      },
     ],
   },
-  experimental: {
-    allowedDevOrigins: ["*.cloudworkstations.dev"],
-  }
+  experimental: {},
+  allowedDevOrigins: ["*.cloudworkstations.dev", "*.googleusercontent.com"],
 };
 
 export default nextConfig;

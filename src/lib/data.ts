@@ -6,7 +6,7 @@ export const personalDetails = {
     linkedin: "https://www.linkedin.com/in/harsh-ray-499856329/",
     github: "https://github.com/harshray23",
     instagram: "https://www.instagram.com/_harsh_ray_23/",
-    resumeUrl: "/resume.pdf",
+    resumeUrl: "/cv.pdf",
   };
   
   export const aboutMe = {

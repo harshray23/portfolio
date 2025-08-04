@@ -1,7 +1,6 @@
 
 "use client";
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -34,8 +33,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { personalDetails, aboutMe, projects } from '@/lib/data';
-import { SplashScreen } from '@/components/splash-screen';
+import { personalDetails, aboutMe } from '@/lib/data';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
 import { Chatbot } from '@/components/chatbot';
 
@@ -55,7 +53,6 @@ const contactFormSchema = z.object({
 });
 
 export function HomeClient() {
-  const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -84,30 +81,18 @@ export function HomeClient() {
     }
   }
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 4000); 
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return <SplashScreen />;
-  }
-
   return (
     <>
       <Header />
       <div className="flex-1">
         <section id="hero" className="container grid grid-cols-1 md:grid-cols-5 gap-12 items-center justify-center py-24 md:py-40">
-          <div className="md:col-span-3 space-y-6 text-center md:text-left animate-fade-in">
-            <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 animate-fade-up">
+          <div className="md:col-span-3 space-y-6 text-center md:text-left">
+            <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
               {personalDetails.name}
             </h1>
-            <h2 className="text-2xl font-headline text-muted-foreground animate-fade-up animation-delay-200">{personalDetails.title}</h2>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl animate-fade-up animation-delay-300">{personalDetails.bio}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-up animation-delay-400">
+            <h2 className="text-2xl font-headline text-muted-foreground">{personalDetails.title}</h2>
+            <p className="max-w-[600px] text-muted-foreground md:text-xl">{personalDetails.bio}</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <a href={personalDetails.resumeUrl} download>
                   <Download className="mr-2 h-5 w-5" /> Download Resume
@@ -118,7 +103,7 @@ export function HomeClient() {
               </Button>
             </div>
           </div>
-          <div className="md:col-span-2 flex justify-center animate-scale-in">
+          <div className="md:col-span-2 flex justify-center">
             <div className="relative w-[400px] h-[400px]">
               <div className="absolute inset-0 rounded-full border-4 border-primary/20 shadow-2xl shadow-primary/20">
               </div>
@@ -128,26 +113,26 @@ export function HomeClient() {
                 width={400}
                 height={400}
                 className="relative rounded-full"
+                priority
               />
             </div>
           </div>
         </section>
 
         <section id="about" className="py-16 md:py-24 bg-card/90">
-          <div className="container animate-fade-in">
-            <h2 className="text-3xl font-headline font-bold text-center mb-12 animate-fade-up">About Me</h2>
-            <p className="max-w-3xl mx-auto text-center text-lg text-muted-foreground animate-fade-up animation-delay-200">
+          <div className="container">
+            <h2 className="text-3xl font-headline font-bold text-center mb-12">About Me</h2>
+            <p className="max-w-3xl mx-auto text-center text-lg text-muted-foreground">
               {aboutMe.introduction}
             </p>
             <div className="mt-12">
-              <h3 className="text-2xl font-headline font-bold text-center mb-8 animate-fade-up animation-delay-300">My Skills</h3>
+              <h3 className="text-2xl font-headline font-bold text-center mb-8">My Skills</h3>
               <div className="flex flex-wrap justify-center gap-4">
-                {skills.map((skill, index) => (
+                {skills.map((skill) => (
                   <Badge 
                     key={skill.name} 
                     variant="secondary" 
-                    className="text-base py-2 px-4 flex items-center gap-2 animate-fade-up"
-                    style={{ animationDelay: `${(index + 4) * 100}ms` }}
+                    className="text-base py-2 px-4 flex items-center gap-2"
                   >
                     {skill.icon} {skill.name}
                   </Badge>
@@ -158,9 +143,9 @@ export function HomeClient() {
         </section>
 
         <section id="contact" className="py-16 md:py-24">
-          <div className="container animate-fade-in">
-            <h2 className="text-3xl font-headline font-bold text-center mb-4 animate-fade-up">Get In Touch</h2>
-            <p className="max-w-2xl mx-auto text-muted-foreground mb-8 text-center animate-fade-up animation-delay-200">
+          <div className="container">
+            <h2 className="text-3xl font-headline font-bold text-center mb-4">Get In Touch</h2>
+            <p className="max-w-2xl mx-auto text-muted-foreground mb-8 text-center">
               Have a question, a project proposal, or just want to say hi? Use the form below or connect with me on social media.
             </p>
             <div className="max-w-xl mx-auto">
@@ -211,7 +196,7 @@ export function HomeClient() {
                 </form>
               </Form>
             </div>
-            <div className="flex justify-center items-center gap-4 sm:gap-8 flex-wrap animate-fade-up animation-delay-300 mt-12">
+            <div className="flex justify-center items-center gap-4 sm:gap-8 flex-wrap mt-12">
               <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
                 <a href={`mailto:${personalDetails.email}`}>
                   <Mail className="mr-2" /> {personalDetails.email}

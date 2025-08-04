@@ -17,9 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Space Grotesk', 'sans-serif'],
-        code: ['monospace'],
+        body: ['var(--font-inter)', 'sans-serif'],
+        headline: ['var(--font-space-grotesk)', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -95,61 +94,14 @@ export default {
             height: '0',
           },
         },
-        'fade-in': {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        'fade-up': {
-            '0%': { opacity: '0', transform: 'translateY(20px)' },
-            '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        'scale-in': {
-            '0%': { opacity: '0', transform: 'scale(0.95)' },
-            '100%': { opacity: '1', transform: 'scale(1)' },
-        },
-        'pulse-subtle': {
-          '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.02)' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in': 'fade-in 0.5s ease-in-out forwards',
-        'fade-up': 'fade-up 0.5s ease-in-out forwards',
-        'scale-in': 'scale-in 0.5s ease-in-out forwards',
-        'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
       },
-      animationDelay: {
-        '100': '100ms',
-        '200': '200ms',
-        '300': '300ms',
-        '400': '400ms',
-        '500': '500ms',
-      }
     },
   },
   plugins: [
     require('tailwindcss-animate'),
-    function({ addUtilities, theme }: { addUtilities: any, theme: any }) {
-      const newUtilities = {
-        '.animation-delay-100': {
-          animationDelay: theme('animationDelay.100'),
-        },
-        '.animation-delay-200': {
-          animationDelay: theme('animationDelay.200'),
-        },
-        '.animation-delay-300': {
-          animationDelay: theme('animationDelay.300'),
-        },
-        '.animation-delay-400': {
-          animationDelay: theme('animationDelay.400'),
-        },
-        '.animation-delay-500': {
-          animationDelay: theme('animationDelay.500'),
-        },
-      }
-      addUtilities(newUtilities, ['responsive', 'hover'])
-    }
   ],
 } satisfies Config;

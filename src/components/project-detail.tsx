@@ -21,6 +21,15 @@ type Project = {
 };
 
 export function ProjectDetail({ project }: { project: Project }) {
+    const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = personalDetails.resumeUrl;
+    link.download = 'Harsh-Ray-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="flex-1 py-16 md:py-24">
       <div className="container">
@@ -89,10 +98,8 @@ export function ProjectDetail({ project }: { project: Project }) {
                             </a>
                         </Button>
                         )}
-                         <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                            <a href={personalDetails.resumeUrl} download>
+                         <Button onClick={handleDownload} className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                             <Download className="mr-2 h-5 w-5" /> Download Resume
-                            </a>
                         </Button>
                     </div>
                 </div>

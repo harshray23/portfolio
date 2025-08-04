@@ -83,6 +83,15 @@ export function HomeClient() {
     }
   }
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = personalDetails.resumeUrl;
+    link.download = 'Harsh-Ray-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <Header />
@@ -95,10 +104,8 @@ export function HomeClient() {
             <h2 className="text-2xl font-headline text-muted-foreground">{personalDetails.title}</h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">{personalDetails.bio}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <a href={personalDetails.resumeUrl} download>
+              <Button onClick={handleDownload} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                   <Download className="mr-2 h-5 w-5" /> Download Resume
-                </a>
               </Button>
               <Button asChild variant="secondary" size="lg">
                 <Link href="#contact">Contact Me</Link>

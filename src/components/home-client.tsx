@@ -35,12 +35,14 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { personalDetails, aboutMe } from '@/lib/data';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
-import { Chatbot } from '@/components/chatbot';
 
 const skills = [
   { name: 'Python', icon: <Code className="h-5 w-5" /> },
   { name: 'Java', icon: <Code className="h-5 w-5" /> },
   { name: 'C', icon: <Code className="h-5 w-5" /> },
+  { name: 'C++', icon: <Code className="h-5 w-5" /> },
+  { name: 'HTML', icon: <Code className="h-5 w-5" /> },
+  { name: 'CSS', icon: <Code className="h-5 w-5" /> },
   { name: 'Firebase', icon: <Cloud className="h-5 w-5" /> },
   { name: 'MySQL', icon: <Database className="h-5 w-5" /> },
   { name: 'Data Structures', icon: <BrainCircuit className="h-5 w-5" /> },
@@ -221,7 +223,6 @@ export function HomeClient() {
           </div>
         </section>
       </div>
-      <Chatbot />
       <Footer 
         name={personalDetails.name}
         email={personalDetails.email}

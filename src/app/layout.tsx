@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { Chatbot } from '@/components/chatbot';
 
 export const metadata: Metadata = {
   title: 'PortfolioPro',
@@ -32,6 +33,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
         </div>
         <Toaster />
+        <Chatbot />
       </body>
     </html>
   );

@@ -3,7 +3,8 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { ExperienceTimeline } from "@/components/experience-timeline";
-import { aboutMe, personalDetails, skills, experience, education } from "@/lib/data";
+import { aboutMe, personalDetails, skills, experience, education, hobbies } from "@/lib/data";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function AboutPage() {
   return (
@@ -17,6 +18,24 @@ export default function AboutPage() {
               {aboutMe.introduction}
             </p>
             
+            <Card className="max-w-4xl mx-auto mb-16 bg-card/90">
+                <CardHeader>
+                    <CardTitle className="text-2xl font-headline text-center">Hobbies & Interests</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <div className="flex flex-wrap justify-center gap-6">
+                        {hobbies.map((hobby) => (
+                            <div key={hobby.name} className="flex flex-col items-center gap-2 text-center">
+                                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 text-primary border border-primary/20">
+                                    <hobby.icon className="h-8 w-8" />
+                                </div>
+                                <span className="font-medium">{hobby.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                </CardContent>
+            </Card>
+
             <div className="grid md:grid-cols-2 gap-16">
               <ExperienceTimeline title="Experience" items={experience} />
               <ExperienceTimeline title="Education" items={education} />

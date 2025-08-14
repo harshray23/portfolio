@@ -104,11 +104,14 @@ export function HomeClient() {
         </section>
 
         <section id="about" className="py-16 md:py-24 bg-card/90">
-          <div className="container">
-            <h2 className="text-3xl font-headline font-bold text-center mb-12">About Me</h2>
-            <p className="max-w-3xl mx-auto text-center text-lg text-muted-foreground">
-              {aboutMe.introduction}
+          <div className="container text-center">
+            <h2 className="text-3xl font-headline font-bold mb-4">About Me</h2>
+            <p className="max-w-3xl mx-auto text-lg text-muted-foreground mb-8">
+              {aboutMe.summary}
             </p>
+            <Button asChild>
+                <Link href="/about">Read More</Link>
+            </Button>
           </div>
         </section>
 

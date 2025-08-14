@@ -11,7 +11,7 @@ export function Header() {
         </Link>
         <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
           <Button variant="ghost" asChild>
-            <Link href="/#about">About</Link>
+            <Link href="/about">About</Link>
           </Button>
            <Button variant="ghost" asChild>
             <Link href="/projects">Projects</Link>
@@ -20,7 +20,7 @@ export function Header() {
             <Link href="/#skills">Skills</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link href="/#contact">Contact</Link>
+            <Link href="#contact">Contact</Link>
           </Button>
         </nav>
       </div>

@@ -13,6 +13,7 @@ export const personalDetails = {
   };
   
   export const aboutMe = {
+    summary: "A driven Computer Science student specializing in AI/ML, passionate about turning complex ideas into smart, user-friendly tech solutions.",
     introduction: "Hi, I'm Harsh Ray. I'm a second-year student specializing in Computer Science with a focus on Artificial Intelligence and Machine Learning. With a curious mind and a drive to keep learning, I’ve been honing my skills in Python, C, Java, Firebase, and MySQL — turning classroom concepts into hands-on projects. I’m passionate about building smart, efficient, and user-friendly tech solutions that not only work great but feel great to use. When I’m not coding, you’ll probably find me playing cricket or football, swimming, vibing to music, or exploring new places on tour. These experiences fuel my creativity and keep me inspired.",
   };
   

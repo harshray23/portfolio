@@ -33,14 +33,14 @@ export const personalDetails = {
     {
       title: 'Web Development Intern',
       company: 'AEC',
-      date: 'Jun 2024 - Jul 2024',
+      date: 'Jun 2024 - Present',
       description: 'Developed and maintained the official college portal using Next.js and Firebase. Implemented features for student and faculty, improving data management and accessibility.',
       icon: Briefcase,
     },
     {
         title: 'NCC Cadet',
         company: 'National Cadet Corps',
-        date: '2023 - Present',
+        date: '2024 - Present',
         description: 'Engaged in various training activities, developing leadership, discipline, and teamwork skills. Participated in community service and national-level camps.',
         icon: Briefcase,
     }
@@ -50,15 +50,22 @@ export const personalDetails = {
     {
       title: 'B.Tech in CSE (AI & ML)',
       institution: 'Asansol Engineering College',
-      date: '2023 - 2027',
+      date: '2024 - 2028',
       description: 'Pursuing a degree with a focus on Artificial Intelligence and Machine Learning, gaining a strong foundation in computer science principles and advanced topics.',
       icon: GraduationCap,
     },
      {
       title: 'Higher Secondary Education',
       institution: 'D.A.V. Public School',
-      date: '2021 - 2023',
+      date: '2022 - 2024',
       description: 'Completed higher secondary education with a focus on science and mathematics, achieving top grades and participating in various science fairs.',
+      icon: GraduationCap,
+    },
+    {
+      title: 'Matriculation',
+      institution: 'D.A.V. Public School',
+      date: '2022',
+      description: 'Completed matriculation with excellent grades, setting a strong academic foundation.',
       icon: GraduationCap,
     }
   ];

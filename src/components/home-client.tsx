@@ -5,10 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   Download,
-  Code,
-  BrainCircuit,
-  Database,
-  Cloud,
   Mail,
   Linkedin,
   Github,
@@ -33,20 +29,11 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { personalDetails, aboutMe } from '@/lib/data';
+import { FeaturedProjects } from '@/components/featured-projects';
+import { ExperienceTimeline } from '@/components/experience-timeline';
+import { personalDetails, aboutMe, skills, experience, education } from '@/lib/data';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
 
-const skills = [
-  { name: 'Python', icon: <Code className="h-5 w-5" /> },
-  { name: 'Java', icon: <Code className="h-5 w-5" /> },
-  { name: 'C', icon: <Code className="h-5 w-5" /> },
-  { name: 'C++', icon: <Code className="h-5 w-5" /> },
-  { name: 'HTML', icon: <Code className="h-5 w-5" /> },
-  { name: 'CSS', icon: <Code className="h-5 w-5" /> },
-  { name: 'Firebase', icon: <Cloud className="h-5 w-5" /> },
-  { name: 'MySQL', icon: <Database className="h-5 w-5" /> },
-  { name: 'Data Structures', icon: <BrainCircuit className="h-5 w-5" /> },
-];
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -134,24 +121,49 @@ export function HomeClient() {
             <p className="max-w-3xl mx-auto text-center text-lg text-muted-foreground">
               {aboutMe.introduction}
             </p>
-            <div className="mt-12">
-              <h3 className="text-2xl font-headline font-bold text-center mb-8">My Skills</h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                {skills.map((skill) => (
-                  <Badge 
-                    key={skill.name} 
-                    variant="secondary" 
-                    className="text-base py-2 px-4 flex items-center gap-2"
-                  >
-                    {skill.icon} {skill.name}
-                  </Badge>
-                ))}
-              </div>
-            </div>
           </div>
         </section>
 
-        <section id="contact" className="py-16 md:py-24">
+        <section id="projects" className="py-16 md:py-24">
+            <div className="container">
+                <h2 className="text-3xl font-headline font-bold text-center mb-12">Featured Projects</h2>
+                <FeaturedProjects />
+                 <div className="text-center mt-12">
+                    <Button asChild variant="outline" size="lg">
+                        <Link href="/projects">View All Projects</Link>
+                    </Button>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" className="py-16 md:py-24 bg-card/90">
+            <div className="container">
+                 <h2 className="text-3xl font-headline font-bold text-center mb-12">My Skills</h2>
+                 <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                    {skills.map((skill) => (
+                    <Badge 
+                        key={skill.name} 
+                        variant="secondary" 
+                        className="text-base py-2 px-4 flex items-center gap-2"
+                    >
+                        <skill.icon /> {skill.name}
+                    </Badge>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" className="py-16 md:py-24">
+            <div className="container">
+                 <h2 className="text-3xl font-headline font-bold text-center mb-12">Experience & Education</h2>
+                <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                    <ExperienceTimeline title="Experience" items={experience} />
+                    <ExperienceTimeline title="Education" items={education} />
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" className="py-16 md:py-24 bg-card/90">
           <div className="container">
             <h2 className="text-3xl font-headline font-bold text-center mb-4">Get In Touch</h2>
             <p className="max-w-2xl mx-auto text-muted-foreground mb-8 text-center">

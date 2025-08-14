@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from './ui/button';
 
@@ -12,8 +13,14 @@ export function Header() {
           <Button variant="ghost" asChild>
             <Link href="/#about">About</Link>
           </Button>
+           <Button variant="ghost" asChild>
+            <Link href="/#projects">Projects</Link>
+          </Button>
+           <Button variant="ghost" asChild>
+            <Link href="/#skills">Skills</Link>
+          </Button>
           <Button variant="ghost" asChild>
-            <Link href="/projects">Projects</Link>
+            <Link href="/#experience">Experience</Link>
           </Button>
           <Button variant="ghost" asChild>
             <Link href="/#contact">Contact</Link>

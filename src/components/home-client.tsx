@@ -29,7 +29,6 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { FeaturedProjects } from '@/components/featured-projects';
 import { ExperienceTimeline } from '@/components/experience-timeline';
 import { personalDetails, aboutMe, skills, experience, education } from '@/lib/data';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
@@ -122,18 +121,6 @@ export function HomeClient() {
               {aboutMe.introduction}
             </p>
           </div>
-        </section>
-
-        <section id="projects" className="py-16 md:py-24">
-            <div className="container">
-                <h2 className="text-3xl font-headline font-bold text-center mb-12">Featured Projects</h2>
-                <FeaturedProjects />
-                 <div className="text-center mt-12">
-                    <Button asChild variant="outline" size="lg">
-                        <Link href="/projects">View All Projects</Link>
-                    </Button>
-                </div>
-            </div>
         </section>
 
         <section id="skills" className="py-16 md:py-24 bg-card/90">

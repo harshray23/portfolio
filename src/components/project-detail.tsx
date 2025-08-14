@@ -1,7 +1,8 @@
+
 "use client";
 
 import Image from "next/image";
-import { Github, Globe, ArrowLeft, Download } from "lucide-react";
+import { Github, Globe, ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -21,14 +22,6 @@ type Project = {
 };
 
 export function ProjectDetail({ project }: { project: Project }) {
-    const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = personalDetails.resumeUrl;
-    link.download = 'Harsh-Ray-Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <div className="flex-1 py-16 md:py-24">
@@ -98,8 +91,8 @@ export function ProjectDetail({ project }: { project: Project }) {
                             </a>
                         </Button>
                         )}
-                         <Button onClick={handleDownload} className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                            <Download className="mr-2 h-5 w-5" /> Download Resume
+                         <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                            <Link href="/resume">View Resume</Link>
                         </Button>
                     </div>
                 </div>

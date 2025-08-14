@@ -29,8 +29,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { ExperienceTimeline } from '@/components/experience-timeline';
-import { personalDetails, aboutMe, skills, experience, education } from '@/lib/data';
+import { personalDetails, aboutMe, skills } from '@/lib/data';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
 
 
@@ -136,16 +135,6 @@ export function HomeClient() {
                         <skill.icon /> {skill.name}
                     </Badge>
                     ))}
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" className="py-16 md:py-24">
-            <div className="container">
-                 <h2 className="text-3xl font-headline font-bold text-center mb-12">Experience & Education</h2>
-                <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-                    <ExperienceTimeline title="Experience" items={experience} />
-                    <ExperienceTimeline title="Education" items={education} />
                 </div>
             </div>
         </section>

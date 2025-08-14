@@ -20,9 +20,6 @@ export function Header() {
             <Link href="/#skills">Skills</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link href="/#experience">Experience</Link>
-          </Button>
-          <Button variant="ghost" asChild>
             <Link href="/#contact">Contact</Link>
           </Button>
         </nav>

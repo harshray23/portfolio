@@ -31,6 +31,9 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { personalDetails, aboutMe, skills } from '@/lib/data';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
+import { FeaturedProjects } from './featured-projects';
+import { ExperienceTimeline } from './experience-timeline';
+import { experience, education } from '@/lib/data';
 
 
 const contactFormSchema = z.object({
@@ -127,13 +130,18 @@ export function HomeClient() {
                  <h2 className="text-3xl font-headline font-bold text-center mb-12">My Skills</h2>
                  <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
                     {skills.map((skill) => (
-                    <Badge 
-                        key={skill.name} 
-                        variant="secondary" 
-                        className="text-base py-2 px-4 flex items-center gap-2"
-                    >
-                        <skill.icon /> {skill.name}
-                    </Badge>
+                      <Badge 
+                          key={skill.name} 
+                          variant="secondary" 
+                          className="text-base py-2 px-4 group relative overflow-hidden"
+                      >
+                          <div className="transition-transform duration-300 ease-in-out group-hover:translate-y-full">
+                            {skill.name}
+                          </div>
+                          <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out -translate-y-full group-hover:translate-y-0">
+                            <skill.icon className="h-5 w-5" />
+                          </div>
+                      </Badge>
                     ))}
                 </div>
             </div>

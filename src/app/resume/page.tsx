@@ -1,7 +1,7 @@
 
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { personalDetails } from '@/lib/data';
+import { personalDetails } from '@/lib/data.tsx';
 import { ResumeViewer } from '@/components/resume-viewer';
 
 export default function ResumePage() {

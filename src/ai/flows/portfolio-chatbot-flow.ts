@@ -10,7 +10,7 @@
 
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
-import { personalDetails, aboutMe, projects, skills } from '@/lib/data';
+import { personalDetails, aboutMe, projects, skills } from '@/lib/data.tsx';
 
 const PortfolioChatbotInputSchema = z.object({
   message: z.string().describe('The user\'s message to the chatbot.'),

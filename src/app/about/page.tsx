@@ -3,8 +3,27 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { ExperienceTimeline } from "@/components/experience-timeline";
-import { aboutMe, personalDetails, skills, experience, education, hobbies } from "@/lib/data";
+import { aboutMe, personalDetails, skills, experience, education, hobbies } from "@/lib/data.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { LucideIcon } from 'lucide-react';
+
+const Baseball: LucideIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-baseball" {...props}>
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M18 18c-3-1.5-7.5-1.5-10.5 0"/>
+        <path d="M18 6c-3 1.5-7.5 1.5-10.5 0"/>
+        <path d="M12 2v2"/>
+        <path d="M12 20v2"/>
+        <path d="M5.636 5.636l1.414 1.414"/>
+        <path d="M16.95 16.95l1.414 1.414"/>
+        <path d="M5.636 18.364l1.414-1.414"/>
+        <path d="M16.95 7.05l1.414-1.414"/>
+    </svg>
+);
+
+const hobbyIcons = {
+    Baseball,
+};
 
 export default function AboutPage() {
   return (
@@ -24,14 +43,17 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                     <div className="flex flex-wrap justify-center gap-6">
-                        {hobbies.map((hobby) => (
-                            <div key={hobby.name} className="flex flex-col items-center gap-2 text-center">
-                                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 text-primary border border-primary/20">
-                                    <hobby.icon className="h-8 w-8" />
+                        {hobbies.map((hobby) => {
+                            const IconComponent = hobbyIcons[hobby.icon as keyof typeof hobbyIcons] || hobby.icon;
+                            return (
+                                <div key={hobby.name} className="flex flex-col items-center gap-2 text-center">
+                                    <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 text-primary border border-primary/20">
+                                        <IconComponent className="h-8 w-8" />
+                                    </div>
+                                    <span className="font-medium">{hobby.name}</span>
                                 </div>
-                                <span className="font-medium">{hobby.name}</span>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </CardContent>
             </Card>

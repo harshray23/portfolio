@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { projects, personalDetails } from '@/lib/data';
+import { projects, personalDetails } from '@/lib/data.tsx';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ProjectDetail } from '@/components/project-detail';

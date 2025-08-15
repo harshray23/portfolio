@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ProjectCard } from "@/components/project-card";
-import { projects, personalDetails } from "@/lib/data";
+import { projects, personalDetails } from "@/lib/data.tsx";
 
 export default function ProjectsPage() {
   return (

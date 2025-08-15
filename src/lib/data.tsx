@@ -1,5 +1,6 @@
-
-import { Code, BrainCircuit, Database, Cloud, Briefcase, GraduationCap, Football, Waves, Music, Plane, Baseball } from 'lucide-react';
+import { Code, BrainCircuit, Database, Cloud, Briefcase, GraduationCap, Goal, Waves, Music, Plane } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import React from 'react';
 
 export const personalDetails = {
     name: "Harsh Ray",
@@ -71,8 +72,8 @@ export const personalDetails = {
   ];
 
   export const hobbies = [
-    { name: 'Cricket', icon: Baseball },
-    { name: 'Football', icon: Football },
+    { name: 'Cricket', icon: 'Baseball' as unknown as LucideIcon },
+    { name: 'Football', icon: Goal },
     { name: 'Swimming', icon: Waves },
     { name: 'Music', icon: Music },
     { name: 'Touring', icon: Plane },
@@ -173,3 +174,5 @@ export const personalDetails = {
       dataAiHint: "phone specifications"
     },
   ];
+
+    

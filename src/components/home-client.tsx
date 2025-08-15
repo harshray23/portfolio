@@ -28,7 +28,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { personalDetails, aboutMe, skills } from '@/lib/data';
+import { personalDetails, aboutMe, skills } from '@/lib/data.tsx';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
 
 

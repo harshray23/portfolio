@@ -6,7 +6,7 @@ import { Github, Globe, ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { personalDetails } from "@/lib/data";
+import { personalDetails } from "@/lib/data.tsx";
 
 type Project = {
   title: string;

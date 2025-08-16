@@ -56,14 +56,14 @@ export function Chatbot() {
 
   return (
     <>
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 left-6 z-50">
         <Button onClick={toggleChat} size="icon" className="rounded-full w-16 h-16 shadow-lg">
           {isOpen ? <X className="h-8 w-8" /> : <Bot className="h-8 w-8" />}
         </Button>
       </div>
 
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 w-full max-w-sm h-[60vh] bg-card border rounded-lg shadow-xl flex flex-col animate-in slide-in-from-bottom-4 fade-in-20">
+        <div className="fixed bottom-24 left-6 z-50 w-full max-w-sm h-[60vh] bg-card border rounded-lg shadow-xl flex flex-col animate-in slide-in-from-bottom-4 fade-in-20">
           <header className="p-4 border-b flex items-center bg-card">
             <Bot className="h-6 w-6 mr-2 text-primary" />
             <h3 className="text-lg font-semibold font-headline">Portfolio Pal</h3>

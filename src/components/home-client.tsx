@@ -3,12 +3,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  Mail,
-  Linkedin,
-  Github,
-  Instagram
-} from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -31,6 +25,10 @@ import { Footer } from '@/components/footer';
 import { personalDetails, aboutMe } from '@/lib/data.tsx';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
 import { SkillsSection } from './skills-section';
+import EmailIcon from './icons/EmailIcon';
+import GithubIcon from './icons/GithubIcon';
+import LinkedinIcon from './icons/LinkedinIcon';
+import InstagramIcon from './icons/InstagramIcon';
 
 
 const contactFormSchema = z.object({
@@ -40,10 +38,10 @@ const contactFormSchema = z.object({
 });
 
 const contactLinks = [
-    { name: "Email", icon: Mail, link: `mailto:${personalDetails.email}` },
-    { name: "GitHub", icon: Github, link: personalDetails.github },
-    { name: "LinkedIn", icon: Linkedin, link: personalDetails.linkedin },
-    { name: "Instagram", icon: Instagram, link: personalDetails.instagram },
+    { name: "Email", icon: EmailIcon, link: `mailto:${personalDetails.email}` },
+    { name: "GitHub", icon: GithubIcon, link: personalDetails.github },
+    { name: "LinkedIn", icon: LinkedinIcon, link: personalDetails.linkedin },
+    { name: "Instagram", icon: InstagramIcon, link: personalDetails.instagram },
 ];
 
 

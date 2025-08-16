@@ -1,6 +1,13 @@
-import { Code, BrainCircuit, Database, Cloud, Briefcase, GraduationCap, Goal, Waves, Music, Plane, Trophy, GitBranch } from 'lucide-react';
+
+import { Briefcase, GraduationCap, Goal, Waves, Music, Plane, Trophy, Code } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import React from 'react';
+import PythonIcon from '@/components/icons/PythonIcon';
+import JavaIcon from '@/components/icons/JavaIcon';
+import FirebaseIcon from '@/components/icons/FirebaseIcon';
+import SqlIcon from '@/components/icons/SqlIcon';
+import DataIcon from '@/components/icons/DataIcon';
+import GithubIcon from '@/components/icons/GithubIcon';
 
 export const personalDetails = {
     name: "Harsh Ray",
@@ -19,16 +26,16 @@ export const personalDetails = {
   };
   
   export const skills = [
-    { name: 'Python', icon: Code },
-    { name: 'Java', icon: Code },
+    { name: 'Python', icon: PythonIcon },
+    { name: 'Java', icon: JavaIcon },
     { name: 'C', icon: Code },
     { name: 'C++', icon: Code },
     { name: 'HTML', icon: Code },
     { name: 'CSS', icon: Code },
-    { name: 'Firebase', icon: Cloud },
-    { name: 'MySQL', icon: Database },
-    { name: 'Data Structures', icon: BrainCircuit },
-    { name: 'Git', icon: GitBranch },
+    { name: 'Firebase', icon: FirebaseIcon },
+    { name: 'MySQL', icon: SqlIcon },
+    { name: 'Data Structures', icon: DataIcon },
+    { name: 'Git', icon: GithubIcon },
   ];
 
   export const experience = [
@@ -205,6 +212,7 @@ export const personalDetails = {
   ];
 
     
+
 
 
 

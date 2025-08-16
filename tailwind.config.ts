@@ -19,6 +19,8 @@ export default {
       fontFamily: {
         body: ['var(--font-inter)', 'sans-serif'],
         headline: ['var(--font-space-grotesk)', 'sans-serif'],
+        serif: ['var(--font-playfair-display)', 'serif'],
+        script: ['var(--font-great-vibes)', 'cursive'],
       },
       colors: {
         background: 'hsl(var(--background))',

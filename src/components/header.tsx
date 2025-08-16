@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
-import { Menu, Mountain } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
 export function Header() {
@@ -14,10 +14,12 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-headline text-xl font-bold text-primary">
-          <Mountain />
-          <span>Portfolio</span>
+      <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
+        <Link href="/" className="flex items-center text-primary">
+            <div className="relative">
+                <div className="font-serif text-4xl font-bold tracking-wider">HARSH</div>
+                <div className="font-script absolute -bottom-2 right-0 text-3xl font-normal">Ray</div>
+            </div>
         </Link>
         <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
           <Button variant="ghost" asChild>
@@ -43,9 +45,11 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <div className="flex flex-col gap-4 p-4">
-                 <Link href="/" className="flex items-center gap-2 font-headline text-xl font-bold text-primary mb-4" onClick={closeSheet}>
-                    <Mountain />
-                    <span>Portfolio</span>
+                 <Link href="/" className="flex items-center text-primary mb-4" onClick={closeSheet}>
+                     <div className="relative">
+                        <div className="font-serif text-4xl font-bold tracking-wider">HARSH</div>
+                        <div className="font-script absolute -bottom-2 right-0 text-3xl font-normal">Ray</div>
+                    </div>
                 </Link>
                 <Link href="/about" className="text-lg font-medium" onClick={closeSheet}>About</Link>
                 <Link href="/projects" className="text-lg font-medium" onClick={closeSheet}>Projects</Link>

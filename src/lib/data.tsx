@@ -7,6 +7,7 @@ import { JavaIcon } from '@/components/icons/JavaIcon';
 import { FirebaseIcon } from '@/components/icons/FirebaseIcon';
 import { SqlIcon } from '@/components/icons/SqlIcon';
 import { DataIcon } from '@/components/icons/DataIcon';
+import { CIcon } from '@/components/icons/CIcon';
 
 export const personalDetails = {
     name: "Harsh Ray",
@@ -27,7 +28,7 @@ export const personalDetails = {
   export const skills = [
     { name: 'Python', icon: PythonIcon },
     { name: 'Java', icon: JavaIcon },
-    { name: 'C', icon: Code },
+    { name: 'C', icon: CIcon },
     { name: 'C++', icon: Code },
     { name: 'HTML', icon: Code },
     { name: 'CSS', icon: Code },
@@ -209,3 +210,5 @@ export const personalDetails = {
       dataAiHint: "phone specifications"
     },
   ];
+
+    

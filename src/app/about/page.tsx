@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-headline font-bold text-center mb-12">My Achievements</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {achievements.map((achievement) => (
-                        <Card key={achievement.title} className="bg-card/90 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 cursor-pointer">
+                        <Card key={achievement.title} className="bg-card/90 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 hover:bg-accent cursor-pointer">
                             <CardHeader className="flex flex-row items-center gap-4">
                                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
                                     <achievement.icon className="h-6 w-6" />

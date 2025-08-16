@@ -73,8 +73,11 @@ export function HomeClient() {
       <div className="flex-1">
         <section id="hero" className="container grid grid-cols-1 md:grid-cols-5 gap-12 items-center justify-center py-24 md:py-32">
           <div className="md:col-span-3 space-y-6 text-center md:text-left">
-            <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-              {personalDetails.name}
+            <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+              <span className="block text-muted-foreground">I am</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+                {personalDetails.name}
+              </span>
             </h1>
             <h2 className="text-2xl font-headline text-muted-foreground">{personalDetails.title}</h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">{personalDetails.bio}</p>

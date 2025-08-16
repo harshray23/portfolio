@@ -90,6 +90,21 @@ export const personalDetails = {
         description: 'Successfully defended the swimming championship title, securing the gold medal for two consecutive years.',
         icon: Trophy,
     },
+    {
+        title: 'Third Position in 400m Race',
+        description: 'Secured the third position in the 400m race, demonstrating speed and endurance.',
+        icon: Trophy,
+    },
+    {
+        title: 'Inter-House Football Winner',
+        description: 'Led the team to victory in the inter-house football tournament.',
+        icon: Trophy,
+    },
+    {
+        title: 'Inter-House Cricket Winner',
+        description: 'Led the team to victory in the inter-house cricket tournament.',
+        icon: Trophy,
+    },
   ];
   
   export const projects = [
@@ -189,4 +204,5 @@ export const personalDetails = {
   ];
 
     
+
 

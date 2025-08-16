@@ -89,6 +89,7 @@ export function HomeClient() {
                 alt="Harsh Ray"
                 width={400}
                 height={400}
+                quality={100}
                 className="relative rounded-full"
                 priority
               />

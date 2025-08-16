@@ -20,8 +20,8 @@ export function SkillsSection() {
                             transition={{ duration: 0.5, delay: index * 0.1}}
                         >
                             <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                <div className="bg-gradient-to-br from-red-500 to-orange-400 p-3 rounded-lg shadow-lg">
-                                    <skill.icon className="w-10 h-10 text-white" />
+                                <div className="bg-gradient-to-br from-red-500 to-orange-400 p-4 rounded-xl shadow-lg">
+                                    <skill.icon className="w-12 h-12 text-white" />
                                 </div>
                                 <div className="absolute bottom-[-4px] left-1/2 w-3 h-3 bg-orange-400 transform -translate-x-1/2 rotate-45"></div>
                             </div>

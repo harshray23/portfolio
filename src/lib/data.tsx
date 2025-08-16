@@ -87,7 +87,7 @@ export const personalDetails = {
     },
     {
         title: 'Gold Medal in Swimming',
-        description: 'Secured the gold medal in two separate swimming competitions, showcasing athletic excellence.',
+        description: 'Successfully defended the swimming championship title, securing the gold medal for two consecutive years.',
         icon: Trophy,
     },
   ];
@@ -189,3 +189,4 @@ export const personalDetails = {
   ];
 
     
+

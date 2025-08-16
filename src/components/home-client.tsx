@@ -12,6 +12,7 @@ import {
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { motion } from "framer-motion";
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -27,7 +28,7 @@ import {
 } from '@/components/ui/form';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { personalDetails, aboutMe, skills } from '@/lib/data.tsx';
+import { personalDetails, aboutMe } from '@/lib/data.tsx';
 import { sendContactMessage } from '@/ai/flows/send-contact-message-flow';
 import { SkillsSection } from './skills-section';
 
@@ -37,6 +38,14 @@ const contactFormSchema = z.object({
   email: z.string().email({ message: 'Please enter a valid email address.' }),
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
+
+const contactLinks = [
+    { name: "Email", icon: Mail, link: `mailto:${personalDetails.email}` },
+    { name: "GitHub", icon: Github, link: personalDetails.github },
+    { name: "LinkedIn", icon: Linkedin, link: personalDetails.linkedin },
+    { name: "Instagram", icon: Instagram, link: personalDetails.instagram },
+];
+
 
 export function HomeClient() {
   const { toast } = useToast();
@@ -171,28 +180,44 @@ export function HomeClient() {
                 </form>
               </Form>
             </div>
-            <div className="flex justify-center items-center gap-4 sm:gap-8 flex-wrap mt-12">
-              <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
-                <a href={`mailto:${personalDetails.email}`}>
-                  <Mail className="mr-2" /> {personalDetails.email}
-                </a>
-              </Button>
-              <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
-                <a href={personalDetails.linkedin} target="_blank" rel="noreferrer">
-                  <Linkedin className="mr-2" /> LinkedIn
-                </a>
-              </Button>
-              <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
-                <a href={personalDetails.github} target="_blank" rel="noreferrer">
-                  <Github className="mr-2" /> GitHub
-                </a>
-              </Button>
-              <Button variant="link" asChild className="text-lg text-muted-foreground hover:text-primary transition-colors">
-                <a href={personalDetails.instagram} target="_blank" rel="noreferrer">
-                  <Instagram className="mr-2" /> Instagram
-                </a>
-              </Button>
+
+            <div className="flex flex-wrap gap-6 justify-center mt-12">
+                {contactLinks.map((contact, index) => (
+                  <a
+                    key={index}
+                    href={contact.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="no-underline"
+                  >
+                    <div className="relative group w-28 h-28 flex items-center justify-center rounded-xl bg-card shadow-md overflow-hidden cursor-pointer border border-border/60">
+                      {/* Name */}
+                      <motion.span
+                        className="font-semibold absolute text-foreground"
+                        initial={{ opacity: 1 }}
+                        whileHover={{ opacity: 0 }}
+                        transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+                      >
+                        {contact.name}
+                      </motion.span>
+
+                      {/* Logo Slide Animation */}
+                      <motion.div
+                        className="absolute w-12 h-12 text-foreground"
+                        initial={{ y: 60, opacity: 0 }}
+                        whileHover={{ y: 0, opacity: 1 }}
+                        transition={{
+                          duration: 0.35,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
+                      >
+                        <contact.icon className="w-full h-full" />
+                      </motion.div>
+                    </div>
+                  </a>
+                ))}
             </div>
+
           </div>
         </section>
       </div>

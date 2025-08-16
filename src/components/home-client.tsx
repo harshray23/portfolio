@@ -71,7 +71,7 @@ export function HomeClient() {
     <>
       <Header />
       <div className="flex-1">
-        <section id="hero" className="container grid grid-cols-1 md:grid-cols-5 gap-12 items-center justify-center py-24 md:py-40">
+        <section id="hero" className="container grid grid-cols-1 md:grid-cols-5 gap-12 items-center justify-center py-24 md:py-32">
           <div className="md:col-span-3 space-y-6 text-center md:text-left">
             <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
               {personalDetails.name}
@@ -88,7 +88,7 @@ export function HomeClient() {
             </div>
           </div>
           <div className="md:col-span-2 flex justify-center">
-            <div className="relative w-[400px] h-[400px]">
+            <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]">
               <div className="absolute inset-0 rounded-full border-4 border-primary/20 shadow-2xl shadow-primary/20">
               </div>
               <Image
@@ -115,7 +115,7 @@ export function HomeClient() {
           </div>
         </section>
 
-        <section id="skills" className="py-16 md:py-24 bg-card/90">
+        <section id="skills" className="py-16 md:py-24">
             <div className="container">
                  <h2 className="text-3xl font-headline font-bold text-center mb-12">My Skills</h2>
                  <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">

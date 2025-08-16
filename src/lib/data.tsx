@@ -81,21 +81,16 @@ export const personalDetails = {
 
   export const achievements = [
     {
-        title: 'Top Performer at AEC-FSP Portal',
-        description: 'Recognized as a top performer for my work on the AEC-FSP portal, where I contributed to significant improvements in the platform\'s user experience and functionality.',
+        title: 'Achieved CPL (Corporal) Rank',
+        description: 'Awarded the rank of Corporal in the NCC on 15th August, 2025, for demonstrating leadership and dedication.',
         icon: Trophy,
     },
     {
-        title: 'Winner at TubeDude Buildathon',
-        description: 'Led a team to victory at the TubeDude Buildathon, developing HospConnect, a smart healthcare portal that streamlines patient-doctor communication.',
+        title: 'Gold Medal in Swimming',
+        description: 'Secured the gold medal in two separate swimming competitions, showcasing athletic excellence.',
         icon: Trophy,
     },
-    {
-        title: 'National Level Camp Attendee',
-        description: 'Selected to attend a national-level NCC camp, where I represented my state and participated in various leadership and team-building exercises.',
-        icon: Trophy,
-    },
-];
+  ];
   
   export const projects = [
     {

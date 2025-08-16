@@ -16,11 +16,11 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center text-primary">
-            <div className="relative pt-2">
-                <div className="font-serif text-4xl font-bold tracking-wider">HARSH</div>
+            <div className="relative flex items-center justify-center pt-2">
+                <div className="font-serif text-5xl font-bold tracking-wider">HARSH</div>
                 <div 
-                    className="font-script absolute left-1/2 -translate-x-1/2 text-3xl font-normal"
-                    style={{ transform: 'translateX(-50%) rotate(-15deg)', bottom: '-0.5rem' }}
+                    className="font-script absolute text-4xl font-normal"
+                    style={{ transform: 'rotate(-15deg)' }}
                 >
                     Ray
                 </div>
@@ -51,11 +51,11 @@ export function Header() {
             <SheetContent side="left">
               <div className="flex flex-col gap-4 p-4">
                  <Link href="/" className="flex items-center text-primary mb-4" onClick={closeSheet}>
-                     <div className="relative pt-2">
-                        <div className="font-serif text-4xl font-bold tracking-wider">HARSH</div>
+                     <div className="relative flex items-center justify-center pt-2">
+                        <div className="font-serif text-5xl font-bold tracking-wider">HARSH</div>
                         <div 
-                            className="font-script absolute left-1/2 -translate-x-1/2 text-3xl font-normal"
-                            style={{ transform: 'translateX(-50%) rotate(-15deg)', bottom: '-0.5rem' }}
+                            className="font-script absolute text-4xl font-normal"
+                            style={{ transform: 'rotate(-15deg)' }}
                         >
                             Ray
                         </div>

@@ -1,7 +1,12 @@
 
-import { Briefcase, GraduationCap, Goal, Waves, Music, Plane, Trophy, Code, GitBranch, Database } from 'lucide-react';
+import { Briefcase, GraduationCap, Goal, Waves, Music, Plane, Trophy, Code, GitBranch } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import React from 'react';
+import { PythonIcon } from '@/components/icons/PythonIcon';
+import { JavaIcon } from '@/components/icons/JavaIcon';
+import { FirebaseIcon } from '@/components/icons/FirebaseIcon';
+import { SqlIcon } from '@/components/icons/SqlIcon';
+import { DataIcon } from '@/components/icons/DataIcon';
 
 export const personalDetails = {
     name: "Harsh Ray",
@@ -20,15 +25,15 @@ export const personalDetails = {
   };
   
   export const skills = [
-    { name: 'Python', icon: Code },
-    { name: 'Java', icon: Code },
+    { name: 'Python', icon: PythonIcon },
+    { name: 'Java', icon: JavaIcon },
     { name: 'C', icon: Code },
     { name: 'C++', icon: Code },
     { name: 'HTML', icon: Code },
     { name: 'CSS', icon: Code },
-    { name: 'Firebase', icon: Code },
-    { name: 'MySQL', icon: Code },
-    { name: 'Data Structures', icon: Database },
+    { name: 'Firebase', icon: FirebaseIcon },
+    { name: 'MySQL', icon: SqlIcon },
+    { name: 'Data Structures', icon: DataIcon },
     { name: 'Git', icon: GitBranch },
   ];
 

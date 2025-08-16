@@ -1,12 +1,11 @@
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { Badge } from "@/components/ui/badge";
 import { ExperienceTimeline } from "@/components/experience-timeline";
-import { aboutMe, personalDetails, skills, experience, education, hobbies, achievements } from "@/lib/data.tsx";
+import { aboutMe, personalDetails, experience, education, hobbies, achievements } from "@/lib/data.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { LucideIcon } from 'lucide-react';
-import { Trophy } from 'lucide-react';
+import { SkillsSection } from "@/components/skills-section";
 
 const Baseball: LucideIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-baseball" {...props}>
@@ -67,27 +66,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section id="skills-about" className="py-16 md:py-24 bg-card/90">
-            <div className="container">
-                 <h2 className="text-3xl font-headline font-bold text-center mb-12">My Skills</h2>
-                 <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                    {skills.map((skill) => (
-                      <Badge 
-                          key={skill.name} 
-                          variant="secondary" 
-                          className="text-base py-2 px-4 group relative overflow-hidden"
-                      >
-                          <div className="transition-transform duration-300 ease-in-out group-hover:translate-y-full">
-                            {skill.name}
-                          </div>
-                          <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out -translate-y-full group-hover:translate-y-0">
-                            <skill.icon className="h-5 w-5" />
-                          </div>
-                      </Badge>
-                    ))}
-                </div>
-            </div>
-        </section>
+        <SkillsSection />
 
         <section id="achievements" className="py-16 md:py-24">
             <div className="container">

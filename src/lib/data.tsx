@@ -1,4 +1,4 @@
-import { Code, BrainCircuit, Database, Cloud, Briefcase, GraduationCap, Goal, Waves, Music, Plane, Trophy } from 'lucide-react';
+import { Code, BrainCircuit, Database, Cloud, Briefcase, GraduationCap, Goal, Waves, Music, Plane, Trophy, GitBranch } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import React from 'react';
 
@@ -28,6 +28,7 @@ export const personalDetails = {
     { name: 'Firebase', icon: Cloud },
     { name: 'MySQL', icon: Database },
     { name: 'Data Structures', icon: BrainCircuit },
+    { name: 'Git', icon: GitBranch },
   ];
 
   export const experience = [
@@ -204,5 +205,6 @@ export const personalDetails = {
   ];
 
     
+
 
 

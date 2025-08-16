@@ -1,4 +1,4 @@
-import { Code, BrainCircuit, Database, Cloud, Briefcase, GraduationCap, Goal, Waves, Music, Plane } from 'lucide-react';
+import { Code, BrainCircuit, Database, Cloud, Briefcase, GraduationCap, Goal, Waves, Music, Plane, Trophy } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import React from 'react';
 
@@ -78,6 +78,24 @@ export const personalDetails = {
     { name: 'Music', icon: Music },
     { name: 'Touring', icon: Plane },
   ];
+
+  export const achievements = [
+    {
+        title: 'Top Performer at AEC-FSP Portal',
+        description: 'Recognized as a top performer for my work on the AEC-FSP portal, where I contributed to significant improvements in the platform\'s user experience and functionality.',
+        icon: Trophy,
+    },
+    {
+        title: 'Winner at TubeDude Buildathon',
+        description: 'Led a team to victory at the TubeDude Buildathon, developing HospConnect, a smart healthcare portal that streamlines patient-doctor communication.',
+        icon: Trophy,
+    },
+    {
+        title: 'National Level Camp Attendee',
+        description: 'Selected to attend a national-level NCC camp, where I represented my state and participated in various leadership and team-building exercises.',
+        icon: Trophy,
+    },
+];
   
   export const projects = [
     {

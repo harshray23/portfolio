@@ -3,9 +3,10 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { ExperienceTimeline } from "@/components/experience-timeline";
-import { aboutMe, personalDetails, skills, experience, education, hobbies } from "@/lib/data.tsx";
+import { aboutMe, personalDetails, skills, experience, education, hobbies, achievements } from "@/lib/data.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { LucideIcon } from 'lucide-react';
+import { Trophy } from 'lucide-react';
 
 const Baseball: LucideIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-baseball" {...props}>
@@ -83,6 +84,27 @@ export default function AboutPage() {
                             <skill.icon className="h-5 w-5" />
                           </div>
                       </Badge>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" className="py-16 md:py-24">
+            <div className="container">
+                <h2 className="text-3xl font-headline font-bold text-center mb-12">My Achievements</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {achievements.map((achievement) => (
+                        <Card key={achievement.title} className="bg-card/90">
+                            <CardHeader className="flex flex-row items-center gap-4">
+                                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
+                                    <achievement.icon className="h-6 w-6" />
+                                </div>
+                                <CardTitle className="text-xl font-headline">{achievement.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-muted-foreground">{achievement.description}</p>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
             </div>

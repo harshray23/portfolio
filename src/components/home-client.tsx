@@ -85,9 +85,6 @@ export function HomeClient() {
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <Link href="/resume">View Resume</Link>
               </Button>
-              <Button asChild variant="secondary" size="lg">
-                <Link href="#contact">Contact Me</Link>
-              </Button>
             </div>
           </div>
           <div className="md:col-span-2 flex justify-center">

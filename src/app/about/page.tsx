@@ -10,7 +10,7 @@ import type { LucideIcon } from 'lucide-react';
 import { SkillsSection } from "@/components/skills-section";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Mountain, Rocket } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Baseball: LucideIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-baseball" {...props}>
@@ -52,16 +52,29 @@ export default function AboutPage() {
                             <DialogTitle className="text-3xl font-headline text-center mb-4">{heroJourney.title}</DialogTitle>
                         </DialogHeader>
                         <div className="prose prose-invert max-w-none mx-auto text-left">
-                            <div className="flex items-center gap-4 mb-4">
-                                <Rocket className="h-6 w-6 text-primary" />
-                                <h3 className="text-xl font-semibold m-0">{heroJourney.story.title}</h3>
-                            </div>
-                            <p>{heroJourney.story.content}</p>
-                            <div className="flex items-center gap-4 mt-8 mb-4">
-                                <Mountain className="h-6 w-6 text-primary" />
-                                <h3 className="text-xl font-semibold m-0">{heroJourney.journey.title}</h3>
-                            </div>
-                            <p>{heroJourney.journey.content}</p>
+                            <Accordion type="single" collapsible className="w-full" defaultValue="item-0">
+                                {heroJourney.sections.map((section, index) => (
+                                    <AccordionItem key={index} value={`item-${index}`}>
+                                        <AccordionTrigger className="text-xl font-semibold">
+                                            <div className="flex items-center gap-4">
+                                                <span className="text-2xl">{section.emoji}</span>
+                                                <span>{section.title}</span>
+                                            </div>
+                                        </AccordionTrigger>
+                                        <AccordionContent className="pl-10">
+                                            {Array.isArray(section.content) ? (
+                                                <ul className="list-disc pl-5 space-y-2">
+                                                    {section.content.map((item, i) => (
+                                                        <li key={i}>{item}</li>
+                                                    ))}
+                                                </ul>
+                                            ) : (
+                                                <p>{section.content}</p>
+                                            )}
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
                         </div>
                     </DialogContent>
                 </Dialog>

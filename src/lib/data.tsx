@@ -210,16 +210,55 @@ export const personalDetails = {
   ];
 
   export const heroJourney = {
-    title: "My Hero's Journey",
+    title: "🚀 My Hero’s Journey in Tech",
     buttonText: "View My Hero's Journey",
-    story: {
-        title: "The Spark of Curiosity",
-        content: "From a young age, I was fascinated by how things worked. This curiosity led me to the world of programming, where I discovered the magic of turning lines of code into functional applications. My journey began with a simple 'Hello, World!' program, and from there, I was hooked."
-    },
-    journey: {
-        title: "The Path of a Builder",
-        content: "My path has been one of continuous learning and building. Each project, from a simple Bluetooth-controlled car to a complex institutional portal, has been a stepping stone. I've embraced challenges, learned from failures, and celebrated the thrill of seeing my ideas come to life. This journey is not just about coding; it's about creating solutions that make a difference."
-    }
+    sections: [
+      {
+        emoji: "🌱",
+        title: "Call to Adventure – The Spark of Curiosity",
+        content: "Even as early as Class 7, I was drawn to the world of computers. At first, coding was just memorizing and reproducing for exams. But everything changed when I transferred schools and met a teacher who introduced me to Java. That was the true beginning of my coding journey."
+      },
+      {
+        emoji: "🔥",
+        title: "Trials & Growth – Building Skills and Passion",
+        content: [
+          "After matriculation, I explored Python during higher secondary.",
+          "Discovered my fascination with game development, ethical hacking, and system programming.",
+          "In college, I went deeper into C, the “mother of programming languages,” which sharpened my fundamentals."
+        ]
+      },
+      {
+        emoji: "⚔️",
+        title: "Facing Challenges – Competitions & Hackathons",
+        content: [
+          "Participated in an Innovative Hardware Making Competition → Ranked 128th out of 800 teams.",
+          "Contributed to my college by developing 2 live websites still in use today.",
+          "Competed in the TuteDude Buildathon, where our team built a healthcare system → Won 3rd Prize.",
+          "Twice champion in CODEST coding contests at my college."
+        ]
+      },
+      {
+        emoji: "🌟",
+        title: "Transformation – From Learner to Builder",
+        content: [
+            "The Buildathon healthcare project evolved into a startup initiative in August 2025, with a dedicated team carrying it forward.",
+            "Earned recognition both academically and in competitions, proving that passion can turn into real impact."
+        ]
+      },
+      {
+        emoji: "🏅",
+        title: "Beyond Tech – Discipline & Leadership",
+        content: [
+            "Proud NCC Cadet since 2024 → promoted from Cadet to Corporal.( 15th August, 2025)",
+            "NCC instilled in me discipline, leadership, and teamwork, qualities I carry into every project and startup journey."
+        ]
+      },
+      {
+        emoji: "🌍",
+        title: "The Journey Ahead",
+        content: "From a student memorizing Java code in Class 7 → to building startups, winning hackathons, and leading through NCC, my journey is only at its beginning. The road ahead is about scaling my skills, growing impactful solutions, and pushing the boundaries of technology and innovation."
+      }
+    ]
   };
     
     

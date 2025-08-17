@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ProjectCard } from "@/components/project-card";
@@ -28,6 +29,10 @@ export default function ProjectsPage() {
         github={personalDetails.github}
         linkedin={personalDetails.linkedin}
         instagram={personalDetails.instagram}
+        githubImage={personalDetails.githubImage}
+        linkedinImage={personalDetails.linkedinImage}
+        emailImage={personalDetails.emailImage}
+        instagramImage={personalDetails.instagramImage}
       />
     </>
   );

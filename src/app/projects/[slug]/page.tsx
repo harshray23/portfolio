@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import { projects, personalDetails } from '@/lib/data.tsx';
 import { Header } from '@/components/header';
@@ -27,6 +28,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         github={personalDetails.github}
         linkedin={personalDetails.linkedin}
         instagram={personalDetails.instagram}
+        githubImage={personalDetails.githubImage}
+        linkedinImage={personalDetails.linkedinImage}
+        emailImage={personalDetails.emailImage}
+        instagramImage={personalDetails.instagramImage}
       />
     </>
   );

@@ -12,6 +12,10 @@ export const personalDetails = {
     github: "https://github.com/harshray23",
     instagram: "https://www.instagram.com/_harsh_ray_23/",
     resumeUrl: "/cv.pdf",
+    githubImage: "/github.jpg",
+    linkedinImage: "/linkedin.jpg",
+    emailImage: "/email.jpg",
+    instagramImage: "/insta.jpg",
   };
   
   export const aboutMe = {

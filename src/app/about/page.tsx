@@ -95,6 +95,10 @@ export default function AboutPage() {
         github={personalDetails.github}
         linkedin={personalDetails.linkedin}
         instagram={personalDetails.instagram}
+        githubImage={personalDetails.githubImage}
+        linkedinImage={personalDetails.linkedinImage}
+        emailImage={personalDetails.emailImage}
+        instagramImage={personalDetails.instagramImage}
       />
     </>
   );

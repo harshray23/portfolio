@@ -135,19 +135,27 @@ export default function ContactPage() {
                     const Icon = social.icon;
                     
                     return (
-                    <div key={social.key} className="relative group">
+                    <motion.div 
+                        key={social.key}
+                        className="relative group"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        whileHover={{ y: -10, scale: 1.1 }}
+                    >
                         {image && (
                         <motion.div
                             initial={{ opacity: 0, y: 0, scale: 0.8 }}
-                            whileHover={{ opacity: 1, y: -10, scale: 1.1 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 20, scale: 0.8 }}
                             transition={{ duration: 0.3, ease: 'easeOut' }}
-                            className="w-20 h-20 rounded-lg shadow-2xl absolute bottom-full mb-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                            className="w-20 h-20 rounded-lg shadow-2xl absolute bottom-full mb-4 left-1/2 -translate-x-1/2 pointer-events-none opacity-0 group-hover:opacity-100"
                         >
                             <Image
                                 src={image}
                                 alt={`${social.label} logo`}
                                 fill
-                                objectFit="cover"
+                                style={{ objectFit: "cover" }}
                                 className="rounded-lg"
                             />
                         </motion.div>
@@ -161,7 +169,7 @@ export default function ContactPage() {
                         >
                         <Icon size={24} />
                         </a>
-                    </div>
+                    </motion.div>
                     )
                 })}
             </div>

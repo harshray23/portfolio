@@ -21,16 +21,13 @@ export function SkillsSection() {
                             transition={{ duration: 0.5, delay: index * 0.1}}
                         >
                             <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                <div className="bg-gradient-to-br from-red-500 to-orange-400 p-4 rounded-xl shadow-lg">
-                                    <Image 
-                                      src={skill.icon} 
-                                      alt={`${skill.name} icon`} 
-                                      width={64} 
-                                      height={64}
-                                      className="w-16 h-16" 
-                                    />
-                                </div>
-                                <div className="absolute bottom-[-4px] left-1/2 w-3 h-3 bg-orange-400 transform -translate-x-1/2 rotate-45"></div>
+                                <Image 
+                                  src={skill.icon} 
+                                  alt={`${skill.name} icon`} 
+                                  width={64} 
+                                  height={64}
+                                  className="w-16 h-16 rounded-lg shadow-2xl" 
+                                />
                             </div>
                             <div className="px-5 py-2 rounded-full bg-card border border-border/60 cursor-pointer shadow-sm">
                                 <span className="font-medium text-foreground">{skill.name}</span>

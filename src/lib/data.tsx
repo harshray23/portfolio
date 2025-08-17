@@ -183,7 +183,7 @@ export const personalDetails = {
       summary: "A radar system using an ultrasonic sensor and servo motor for object detection and distance mapping, visualized via a GUI.",
       problemStatement: "This project aimed to create a low-cost radar system for object detection and mapping, which could be used as a foundation for more complex robotics projects like autonomous navigation.",
       thoughtProcess: "I used a servo motor to sweep the ultrasonic sensor across a 180-degree arc, continuously measuring distances. The data was then sent to a Processing-based GUI that visualized the detected objects in real-time.",
-      challengesFaced: "Synchronizing the servo motor's movement with the ultrasonic sensor readings was key. Filtering out noise and false readings from the sensor required implementing a simple averaging algorithm.",
+      challengesFaced: "Synchronizing the servo motor's movement with the a ultrasonic sensor readings was key. Filtering out noise and false readings from the sensor required implementing a simple averaging algorithm.",
       toolsUsed: ["Arduino", "C++", "HC-SR04 Ultrasonic Sensor", "Servo Motor", "Processing"],
       githubUrl: "https://github.com/harshray23/Radar.git",
       imageUrl: "/radar.jpg",

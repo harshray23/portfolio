@@ -2,8 +2,6 @@
 "use client";
 
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 interface FooterProps {
   name: string;
@@ -11,10 +9,6 @@ interface FooterProps {
   linkedin: string;
   email: string;
   instagram?: string;
-  githubImage?: string;
-  linkedinImage?: string;
-  emailImage?: string;
-  instagramImage?: string;
 }
 
 const socialLinks = [
@@ -36,28 +30,11 @@ export function Footer(props: FooterProps) {
         <div className="flex items-center gap-4">
           {socialLinks.map((social) => {
             const url = props[social.key as keyof FooterProps] as string;
-            const image = props[`${social.key}Image` as keyof FooterProps] as string | undefined;
             if (!url) return null;
             const Icon = social.icon;
             
             return (
               <div key={social.key} className="relative group">
-                {image && (
-                   <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5 }}
-                   >
-                     <Image
-                       src={image}
-                       alt={`${social.label} logo`}
-                       width={80}
-                       height={80}
-                       className="w-20 h-20 rounded-lg shadow-2xl absolute bottom-full mb-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                     />
-                   </motion.div>
-                )}
                 <a 
                   href={social.key === 'email' ? `mailto:${url}` : url} 
                   target="_blank" 

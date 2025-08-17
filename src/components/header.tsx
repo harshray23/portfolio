@@ -37,7 +37,7 @@ export function Header() {
             <Link href="/#skills">Skills</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link href="/#contact">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </Button>
         </nav>
         <div className="md:hidden">
@@ -64,7 +64,7 @@ export function Header() {
                 <Link href="/about" className="text-lg font-medium" onClick={closeSheet}>About</Link>
                 <Link href="/projects" className="text-lg font-medium" onClick={closeSheet}>Projects</Link>
                 <Link href="/#skills" className="text-lg font-medium" onClick={closeSheet}>Skills</Link>
-                <Link href="#contact" className="text-lg font-medium" onClick={closeSheet}>Contact</Link>
+                <Link href="/contact" className="text-lg font-medium" onClick={closeSheet}>Contact</Link>
               </div>
             </SheetContent>
           </Sheet>

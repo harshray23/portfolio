@@ -138,15 +138,19 @@ export default function ContactPage() {
                     <motion.div 
                         key={social.key}
                         className="relative group"
-                        whileHover={{ y: -5, scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
+                        whileHover="hover"
                     >
                         {image && (
                         <motion.div
-                            initial={{ opacity: 0, y: 20, scale: 0.8 }}
-                            whileHover={{ opacity: 1, y: 0, scale: 1 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            variants={{
+                                hover: {
+                                    opacity: 1,
+                                    y: 0,
+                                },
+                            }}
                             transition={{ duration: 0.3, ease: 'easeOut' }}
-                            className="w-20 h-20 rounded-lg shadow-2xl absolute bottom-full mb-4 left-1/2 -translate-x-1/2 pointer-events-none opacity-0 group-hover:opacity-100"
+                            className="w-20 h-20 rounded-lg shadow-2xl absolute bottom-full mb-4 left-1/2 -translate-x-1/2 pointer-events-none"
                         >
                             <Image
                                 src={image}

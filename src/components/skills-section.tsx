@@ -20,13 +20,20 @@ export function SkillsSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1}}
                         >
-                            <Image 
-                                src={skill.icon} 
-                                alt={`${skill.name} icon`} 
-                                width={80} 
-                                height={80}
-                                className="w-20 h-20 rounded-lg shadow-2xl absolute bottom-full mb-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" 
-                            />
+                             <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                whileHover={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="w-20 h-20 rounded-lg shadow-2xl absolute bottom-full mb-3 left-1/2 -translate-x-1/2 pointer-events-none"
+                            >
+                                <Image 
+                                    src={skill.icon} 
+                                    alt={`${skill.name} icon`} 
+                                    width={80} 
+                                    height={80}
+                                    className="w-full h-full rounded-lg"
+                                />
+                            </motion.div>
                             <div className="px-5 py-2 rounded-full bg-card border border-border/60 cursor-pointer shadow-sm">
                                 <span className="font-medium text-foreground">{skill.name}</span>
                             </div>

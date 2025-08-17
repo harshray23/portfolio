@@ -25,9 +25,9 @@ export function SkillsSection() {
                                     <Image 
                                       src={skill.icon} 
                                       alt={`${skill.name} icon`} 
-                                      width={48} 
-                                      height={48}
-                                      className="w-12 h-12" 
+                                      width={64} 
+                                      height={64}
+                                      className="w-16 h-16" 
                                     />
                                 </div>
                                 <div className="absolute bottom-[-4px] left-1/2 w-3 h-3 bg-orange-400 transform -translate-x-1/2 rotate-45"></div>
@@ -43,5 +43,3 @@ export function SkillsSection() {
     </section>
   );
 }
-
-    

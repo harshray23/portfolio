@@ -127,7 +127,7 @@ export default function ContactPage() {
               </Form>
             </div>
             
-            <div className="flex items-center justify-center gap-6 mt-16">
+            <div className="flex items-center justify-center gap-10 mt-16">
                 {socialLinks.map((social) => {
                     const url = personalDetails[social.key as keyof typeof personalDetails] as string;
                     const image = personalDetails[`${social.key}Image` as keyof typeof personalDetails] as string | undefined;
@@ -138,17 +138,15 @@ export default function ContactPage() {
                     <div key={social.key} className="relative group">
                         {image && (
                         <motion.div
-                            initial={{ opacity: 0, y: 20, scale: 0.8 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                            whileHover={{ y: -10, scale: 1.1 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 0, scale: 0.8 }}
+                            whileHover={{ opacity: 1, y: -10, scale: 1.1 }}
                             transition={{ duration: 0.3, ease: 'easeOut' }}
                             className="w-20 h-20 rounded-lg shadow-2xl absolute bottom-full mb-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                         >
                             <Image
                                 src={image}
                                 alt={`${social.label} logo`}
-                                layout="fill"
+                                fill
                                 objectFit="cover"
                                 className="rounded-lg"
                             />

@@ -4,6 +4,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { skills } from "@/lib/data";
+import Image from "next/image";
 
 export function SkillsSection() {
   return (
@@ -21,7 +22,13 @@ export function SkillsSection() {
                         >
                             <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                                 <div className="bg-gradient-to-br from-red-500 to-orange-400 p-4 rounded-xl shadow-lg">
-                                    <skill.icon className="w-12 h-12 text-white" />
+                                    <Image 
+                                      src={skill.icon} 
+                                      alt={`${skill.name} icon`} 
+                                      width={48} 
+                                      height={48}
+                                      className="w-12 h-12" 
+                                    />
                                 </div>
                                 <div className="absolute bottom-[-4px] left-1/2 w-3 h-3 bg-orange-400 transform -translate-x-1/2 rotate-45"></div>
                             </div>
@@ -36,3 +43,5 @@ export function SkillsSection() {
     </section>
   );
 }
+
+    

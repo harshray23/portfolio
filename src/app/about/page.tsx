@@ -1,11 +1,16 @@
 
+'use client';
+
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ExperienceTimeline } from "@/components/experience-timeline";
-import { aboutMe, personalDetails, experience, education, hobbies, achievements } from "@/lib/data.tsx";
+import { aboutMe, personalDetails, experience, education, hobbies, achievements, heroJourney } from "@/lib/data.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { LucideIcon } from 'lucide-react';
 import { SkillsSection } from "@/components/skills-section";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Mountain, Rocket } from "lucide-react";
 
 const Baseball: LucideIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-baseball" {...props}>
@@ -36,6 +41,31 @@ export default function AboutPage() {
             <p className="max-w-3xl mx-auto text-center text-lg text-muted-foreground mb-16">
               {aboutMe.introduction}
             </p>
+
+            <div className="text-center mb-16">
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <Button size="lg">{heroJourney.buttonText}</Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-3xl">
+                        <DialogHeader>
+                            <DialogTitle className="text-3xl font-headline text-center mb-4">{heroJourney.title}</DialogTitle>
+                        </DialogHeader>
+                        <div className="prose prose-invert max-w-none mx-auto text-left">
+                            <div className="flex items-center gap-4 mb-4">
+                                <Rocket className="h-6 w-6 text-primary" />
+                                <h3 className="text-xl font-semibold m-0">{heroJourney.story.title}</h3>
+                            </div>
+                            <p>{heroJourney.story.content}</p>
+                            <div className="flex items-center gap-4 mt-8 mb-4">
+                                <Mountain className="h-6 w-6 text-primary" />
+                                <h3 className="text-xl font-semibold m-0">{heroJourney.journey.title}</h3>
+                            </div>
+                            <p>{heroJourney.journey.content}</p>
+                        </div>
+                    </DialogContent>
+                </Dialog>
+            </div>
             
             <Card className="max-w-4xl mx-auto mb-16 bg-card/90">
                 <CardHeader>

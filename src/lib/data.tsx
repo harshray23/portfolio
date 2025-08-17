@@ -209,6 +209,18 @@ export const personalDetails = {
     },
   ];
 
+  export const heroJourney = {
+    title: "My Hero's Journey",
+    buttonText: "View My Hero's Journey",
+    story: {
+        title: "The Spark of Curiosity",
+        content: "From a young age, I was fascinated by how things worked. This curiosity led me to the world of programming, where I discovered the magic of turning lines of code into functional applications. My journey began with a simple 'Hello, World!' program, and from there, I was hooked."
+    },
+    journey: {
+        title: "The Path of a Builder",
+        content: "My path has been one of continuous learning and building. Each project, from a simple Bluetooth-controlled car to a complex institutional portal, has been a stepping stone. I've embraced challenges, learned from failures, and celebrated the thrill of seeing my ideas come to life. This journey is not just about coding; it's about creating solutions that make a difference."
+    }
+  };
     
     
 

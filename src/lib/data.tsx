@@ -150,7 +150,7 @@ export const personalDetails = {
       challengesFaced: "Building a secure and HIPAA-compliant messaging feature within the buildathon's timeframe was a significant challenge. Integrating with a hospital directory API and ensuring data accuracy was another hurdle.",
       toolsUsed: ["Next.js", "Firebase", "Tailwind CSS", "React"],
       githubUrl: "https://github.com/harshray23/hospconnect",
-      webUrl: "https://hospconnect.vercel.app/",
+      webUrl: "https://sanjiwani.vercel.app/",
       imageUrl: "/hospconnect.png",
       dataAiHint: "healthcare portal"
     },

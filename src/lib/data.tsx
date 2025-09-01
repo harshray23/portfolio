@@ -141,15 +141,15 @@ export const personalDetails = {
       dataAiHint: "military management"
     },
     {
-      slug: "hospconnect",
-      title: "HospConnect",
-      description: "Developed for the TubeDude Buildathon, HospConnect is a smart healthcare portal leveraging Next.js and Firebase to streamline patient-doctor communication. It features real-time updates, patient management, and hospital directory services. Deployed with cloud hosting for scalability.",
-      summary: "HospConnect is a smart healthcare portal that streamlines patient-doctor communication with real-time updates, patient management, and hospital directory services.",
-      problemStatement: "Patients often face difficulties in booking appointments and communicating with their doctors efficiently. HospConnect aimed to bridge this gap by providing a seamless digital platform for healthcare interaction.",
+      slug: "sanjivani-health",
+      title: "Sanjivani Health",
+      description: "Developed for the TubeDude Buildathon, Sanjivani Health is a smart healthcare portal leveraging Next.js and Firebase to streamline patient-doctor communication. It features real-time updates, patient management, and hospital directory services. Deployed with cloud hosting for scalability.",
+      summary: "Sanjivani Health is a smart healthcare portal that streamlines patient-doctor communication with real-time updates, patient management, and hospital directory services.",
+      problemStatement: "Patients often face difficulties in booking appointments and communicating with their doctors efficiently. Sanjivani Health aimed to bridge this gap by providing a seamless digital platform for healthcare interaction.",
       thoughtProcess: "The project was developed under the tight deadline of a buildathon. I prioritized core features like appointment booking and a secure messaging system. Firebase was a natural choice for its real-time capabilities and ease of setup.",
       challengesFaced: "Building a secure and HIPAA-compliant messaging feature within the buildathon's timeframe was a significant challenge. Integrating with a hospital directory API and ensuring data accuracy was another hurdle.",
       toolsUsed: ["Next.js", "Firebase", "Tailwind CSS", "React"],
-      githubUrl: "https://github.com/harshray23/hospconnect",
+      githubUrl: "https://github.com/harshray23/sanjivani-health",
       webUrl: "https://sanjiwani.vercel.app/",
       imageUrl: "/hospconnect.png",
       dataAiHint: "healthcare portal"

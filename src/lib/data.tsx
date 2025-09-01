@@ -151,7 +151,7 @@ export const personalDetails = {
       toolsUsed: ["Next.js", "Firebase", "Tailwind CSS", "React"],
       githubUrl: "https://github.com/harshray23/sanjivani-health",
       webUrl: "https://sanjiwani.vercel.app/",
-      imageUrl: "/hospconnect.png",
+      imageUrl: "/sanjiwani.jpg",
       dataAiHint: "healthcare portal"
     },
     {
@@ -264,3 +264,4 @@ export const personalDetails = {
     
 
     
+
